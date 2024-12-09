@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sliderProps } from "../../common/sliderProps";
-
 import SectionData from '../../data/sliders/latest-projects';
 
-const LatestProjects = ( {projects} ) => {
+const LatestProjects = ({ projects = [] }) => { // Default value is an empty array if projects is undefined
   
   return (
     <section className="mil-works mil-p-120-90">
@@ -34,28 +33,32 @@ const LatestProjects = ( {projects} ) => {
           {...sliderProps.latestProjectSlider}
           className="swiper-container mil-works-slider mil-mb-90"
         >
-          {projects.slice(0, SectionData.numOfItems).map((item, key) => (
-          <SwiperSlide className="swiper-slide">
-            <Link href="project" className="mil-card">
-              <div className="mil-cover-frame">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <div className="mil-description">
-                <div className="mil-card-title">
-                  <h4 className="mil-mb-20">
-                    {item.title}
-                  </h4>
-                  <h6>
-                    by: <span className="mil-accent">{item.author}</span>
-                  </h6>
-                </div>
-                <div className="mil-card-text">
-                  <p>{item.short}</p>
-                </div>
-              </div>
-            </Link>
-          </SwiperSlide>
-          ))}
+          {projects && projects.length > 0 ? (
+            projects.slice(0, SectionData.numOfItems).map((item, key) => (
+              <SwiperSlide className="swiper-slide" key={key}>
+                <Link href="project" className="mil-card">
+                  <div className="mil-cover-frame">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div className="mil-description">
+                    <div className="mil-card-title">
+                      <h4 className="mil-mb-20">
+                        {item.title}
+                      </h4>
+                      <h6>
+                        by: <span className="mil-accent">{item.author}</span>
+                      </h6>
+                    </div>
+                    <div className="mil-card-text">
+                      <p>{item.short}</p>
+                    </div>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))
+          ) : (
+            <div>No projects available</div>
+          )}
         </Swiper>
 
         <div className="row align-items-center">
@@ -77,4 +80,5 @@ const LatestProjects = ( {projects} ) => {
     </section>
   );
 };
+
 export default LatestProjects;
