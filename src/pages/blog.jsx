@@ -1,5 +1,5 @@
 import PageBanner from "../../components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import Layouts from "../layouts/Layouts";
 import Link from "next/link";
 const Blog = () => {
   return (

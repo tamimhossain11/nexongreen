@@ -1,5 +1,5 @@
-import ContactForm from "@/src/components/ContactForm";
-import Layouts from "@/src/layouts/Layouts";
+import ContactForm from "../components/ContactForm";
+import Layouts from "../layouts/Layouts";
 import Link from "next/link";
 const TeamSingle = () => {
   return (

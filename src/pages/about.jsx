@@ -1,6 +1,6 @@
-import ContactForm from "@/src/components/ContactForm";
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import ContactForm from "../components/ContactForm";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 import Link from "next/link";
 const About = () => {
   return (

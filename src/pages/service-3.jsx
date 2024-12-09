@@ -1,9 +1,9 @@
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 const Service3NavTabs = dynamic(
-  () => import("@/src/components/sliders/Service3NavTabs"),
+  () => import("../components/sliders/Service3NavTabs"),
   {
     ssr: false,
   }

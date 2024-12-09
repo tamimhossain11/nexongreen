@@ -1,8 +1,8 @@
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 import dynamic from "next/dynamic";
 const Service4Courses = dynamic(
-  () => import("@/src/components/sliders/Service4Courses"),
+  () => import("../components/sliders/Service4Courses"),
   {
     ssr: false,
   }
@@ -74,8 +74,8 @@ const Service4 = () => {
                 Solutions
               </h2>
               <p className="mil-mb-90">
-                The import ContactForm from "@/src/components/ContactForm";
-                import Layouts from "@/src/layouts/Layouts"; constant evolution
+                The import ContactForm from "../components/ContactForm";
+                import Layouts from "../layouts/Layouts"; constant evolution
                 of threats and the race for more sophisticated tools to combat
                 them means that security is changing rapidly.
               </p>

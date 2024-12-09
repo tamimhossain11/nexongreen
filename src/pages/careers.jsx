@@ -1,11 +1,11 @@
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 import dynamic from "next/dynamic";
 
 import { getSortedPostsData } from "../lib/posts";
 
 const CareersBannerSlider = dynamic(
-  () => import("@/src/components/sliders/CareersBannerSlider"),
+  () => import("../components/sliders/CareersBannerSlider"),
   {
     ssr: false,
   }

@@ -1,4 +1,4 @@
-import { sliderProps } from "@/src/common/sliderProps";
+import { sliderProps } from "../../common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
 const Solution2ReviSlider = () => {
   return (

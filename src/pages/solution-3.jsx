@@ -1,21 +1,21 @@
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 
 import dynamic from "next/dynamic";
 const Solution3BoxSlider = dynamic(
-  () => import("@/src/components/sliders/Solution3BoxSlider"),
+  () => import("../components/sliders/Solution3BoxSlider"),
   {
     ssr: false,
   }
 );
 const Solution3ReviSlider = dynamic(
-  () => import("@/src/components/sliders/Solution3ReviSlider"),
+  () => import("../components/sliders/Solution3ReviSlider"),
   {
     ssr: false,
   }
 );
 const Solution3TabsSlider = dynamic(
-  () => import("@/src/components/sliders/Solution3TabsSlider"),
+  () => import("../components/sliders/Solution3TabsSlider"),
   {
     ssr: false,
   }

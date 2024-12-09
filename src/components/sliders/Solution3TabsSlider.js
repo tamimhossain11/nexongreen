@@ -1,4 +1,4 @@
-import { sliderProps } from "@/src/common/sliderProps";
+import { sliderProps } from "../../common/sliderProps";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 

@@ -1,8 +1,8 @@
-import PageBanner from "@/src/components/PageBanner";
-import Layouts from "@/src/layouts/Layouts";
+import PageBanner from "../components/PageBanner";
+import Layouts from "../layouts/Layouts";
 import dynamic from "next/dynamic";
 const PriceTestimonialSlider = dynamic(
-  () => import("@/src/components/sliders/PriceTestimonialSlider"),
+  () => import("../components/sliders/PriceTestimonialSlider"),
   {
     ssr: false,
   }
