@@ -1,4 +1,16 @@
 {
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "script" // For CommonJS
+  },
   "overrides": [
     {
       "files": ["**/sliderProps.js"],
@@ -6,5 +18,8 @@
         "react-hooks/rules-of-hooks": "off"
       }
     }
-  ]
+  ],
+  "rules": {
+    "no-undef": "warn"
+  }
 }
