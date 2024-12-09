@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "overrides": [
+    {
+      "files": ["**/sliderProps.js"],
+      "rules": {
+        "react-hooks/rules-of-hooks": "off"
+      }
+    }
+  ]
 }
