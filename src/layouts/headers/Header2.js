@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header2 = () => {
   return (
     <div className="mil-top-position mil-fixed has-additional-panel">

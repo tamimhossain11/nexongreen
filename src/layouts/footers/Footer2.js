@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer2 = () => {
   return (
     <footer className="mil-dark-bg">
@@ -56,21 +58,11 @@ const Footer2 = () => {
                 <div className="col-md-4 col-lg-4 mil-mb-60">
                   <h4 className="mil-list-title mil-light mil-mb-60">Social</h4>
                   <ul className="mil-hover-link-list mil-light">
-                    <li>
-                      <a href="#.">Facebook</a>
-                    </li>
-                    <li>
-                      <a href="#.">Instagram</a>
-                    </li>
-                    <li>
-                      <a href="#.">LinkedIn</a>
-                    </li>
-                    <li>
-                      <a href="#.">Twitter</a>
-                    </li>
-                    <li>
-                      <a href="#.">YouTube</a>
-                    </li>
+                    <li><a href="#.">Facebook</a></li>
+                    <li><a href="#.">Instagram</a></li>
+                    <li><a href="#.">LinkedIn</a></li>
+                    <li><a href="#.">Twitter</a></li>
+                    <li><a href="#.">YouTube</a></li>
                   </ul>
                 </div>
                 <div className="col-md-4 col-lg-4 mil-mb-60">
@@ -78,41 +70,21 @@ const Footer2 = () => {
                     Support
                   </h4>
                   <ul className="mil-hover-link-list mil-light">
-                    <li>
-                      <a href="/contact">Contact Us</a>
-                    </li>
-                    <li>
-                      <a href="/faq">FAQs</a>
-                    </li>
-                    <li>
-                      <a href="/blog">Blog</a>
-                    </li>
-                    <li>
-                      <a href="/portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="/careers">Careers</a>
-                    </li>
+                    <li><Link href="/contact">Contact Us</Link></li>
+                    <li><Link href="/faq">FAQs</Link></li>
+                    <li><Link href="/blog">Blog</Link></li>
+                    <li><Link href="/portfolio">Portfolio</Link></li>
+                    <li><Link href="/careers">Careers</Link></li>
                   </ul>
                 </div>
                 <div className="col-md-4 col-lg-4 mil-mb-60">
                   <h4 className="mil-list-title mil-light mil-mb-60">Links</h4>
                   <ul className="mil-hover-link-list mil-light">
-                    <li>
-                      <a href="/about">About Us</a>
-                    </li>
-                    <li>
-                      <a href="/team">Our Team</a>
-                    </li>
-                    <li>
-                      <a href="/contact">Get a Quote</a>
-                    </li>
-                    <li>
-                      <a href="#.">Terms &amp; Conditions</a>
-                    </li>
-                    <li>
-                      <a href="#.">Privacy Policy</a>
-                    </li>
+                    <li><Link href="/about">About Us</Link></li>
+                    <li><Link href="/team">Our Team</Link></li>
+                    <li><Link href="/contact">Get a Quote</Link></li>
+                    <li><a href="#.">Terms &amp; Conditions</a></li>
+                    <li><a href="#.">Privacy Policy</a></li>
                   </ul>
                 </div>
               </div>
