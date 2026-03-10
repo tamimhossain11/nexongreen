@@ -7,7 +7,7 @@ const DefaultFooter = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col-xl-4 mil-mb-30">
               <img
-                src="img/logo/logo-light.png"
+                src="/logo-trans.png"
                 alt="logo"
                 className="mil-logo mil-mb-30"
                 style={{ width: 140 }}

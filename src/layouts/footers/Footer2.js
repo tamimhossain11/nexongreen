@@ -26,7 +26,7 @@ const Footer2 = () => {
           <div className="row justify-content-between mil-p-120-60">
             <div className="col-md-3 col-lg-3 col-xl-3 mil-mb-30">
               <img
-                src="img/logo/logo-light.png"
+                src="/logo-trans.png"
                 alt="logo"
                 className="mil-logo mil-mb-60"
                 style={{ width: 140 }}

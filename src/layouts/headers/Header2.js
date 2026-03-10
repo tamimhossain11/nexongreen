@@ -29,7 +29,9 @@ const Header2 = () => {
         {/* mil-top-panel-transparent */}
         <div className="container">
           <Link href="/" legacyBehavior>
-            <a className="mil-logo" style={{ width: 140 }} />
+            <a className="mil-logo" style={{ width: 200 }}>
+              <img src="/logo1.png" alt="NexonGreen" style={{ width: 160, height: "auto" }} />
+            </a>
           </Link>
           <div className="mil-navigation">
             <nav>
