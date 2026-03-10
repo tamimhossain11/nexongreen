@@ -1,4 +1,4 @@
-import SwiperCore, {
+import {
   A11y,
   Autoplay,
   EffectCreative,
@@ -13,32 +13,32 @@ import SwiperCore, {
   Scrollbar,
   Thumbs,
   Virtual,
-} from "swiper";
-
-SwiperCore.use([
-  Mousewheel,
-  Pagination,
-  Navigation,
-  EffectFade,
-  Autoplay,
-  Grid,
-  EffectCreative,
-  Virtual,
-  Pagination,
-  HashNavigation,
-  History,
-  Thumbs,
-  Scrollbar,
-  Keyboard,
-  A11y,
-]);
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const allModules = [
+  Mousewheel,
+  Pagination,
+  Navigation,
+  EffectFade,
+  Autoplay,
+  Grid,
+  EffectCreative,
+  Virtual,
+  HashNavigation,
+  History,
+  Thumbs,
+  Scrollbar,
+  Keyboard,
+  A11y,
+];
+
 export const sliderProps = {
   latestProjectSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -53,6 +53,7 @@ export const sliderProps = {
     },
   },
   milBlogSlider: {
+    modules: allModules,
     spaceBetween: 30,
     speed: 800,
     slidesPerView: 1,
@@ -73,6 +74,7 @@ export const sliderProps = {
     },
   },
   milBannersSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -93,6 +95,7 @@ export const sliderProps = {
     },
   },
   milReviSlider2: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -111,6 +114,7 @@ export const sliderProps = {
     },
   },
   milBoxSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -122,6 +126,7 @@ export const sliderProps = {
     },
   },
   milCoursesSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -139,6 +144,7 @@ export const sliderProps = {
     },
   },
   milTabsSlider: {
+    modules: allModules,
     slidesPerView: 1,
     speed: 800,
     allowTouchMove: false,
@@ -148,18 +154,8 @@ export const sliderProps = {
     effect: "fade",
     parallax: true,
   },
-  milBoxSlider: {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    speed: 800,
-    parallax: true,
-    effect: "fade",
-    navigation: {
-      prevEl: ".mil-box-prev",
-      nextEl: ".mil-box-next",
-    },
-  },
   milReviSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -177,6 +173,7 @@ export const sliderProps = {
     },
   },
   milEventsSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
@@ -194,6 +191,7 @@ export const sliderProps = {
     },
   },
   milServicesSlider: {
+    modules: allModules,
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
