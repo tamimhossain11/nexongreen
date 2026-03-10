@@ -1,8 +1,8 @@
 {
-    "title": { "first": "We Provide Services <br />and Solutions", "second": "To Enterprise" },
-    "subtitle": { "first": "The Next", "second": "Gen" },
-    "button": { "label": "Let’s Talk", "link": "/contact" },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": { "first": "Powering Future with", "second": "Next-Gen IT" },
+    "subtitle": { "first": "NexonGreen", "second": "IT Solutions" },
+    "button": { "label": "Let's Talk", "link": "/contact" },
+    "description": "NexonGreen delivers cutting-edge IT services — from IoT and mobile apps to web design, WordPress, portfolio creation, and digital forensics.",
     "slides": [
         {
             "image": "img/photo/1.jpg"
@@ -16,19 +16,19 @@
     ],
     "items": [
         {
-            "label": "Dedicated Team",
-            "title": "Experts",
-            "text": "And here's some amazing content. It's very engaging. Right?"
+            "label": "IoT Solutions",
+            "title": "Connected Devices",
+            "text": "We design and develop smart IoT systems that connect devices, automate processes, and deliver real-time data insights for businesses."
         },
         {
-            "label": "Developers",
-            "title": "Experts",
-            "text": "And here's some amazing content. It's very engaging. Right?"
+            "label": "App & Web",
+            "title": "Mobile & Web Dev",
+            "text": "From mobile apps to WordPress websites and custom web platforms, we build scalable, user-friendly digital experiences."
         },
         {
-            "label": "Designers",
-            "title": "Experts",
-            "text": "And here's some amazing content. It's very engaging. Right?"
+            "label": "Portfolio & Forensics",
+            "title": "Specialized Services",
+            "text": "We craft stunning personal portfolios and provide professional digital forensics support using tools like FTK."
         }
     ]
 }

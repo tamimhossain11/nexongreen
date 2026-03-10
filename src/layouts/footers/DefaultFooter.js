@@ -13,9 +13,7 @@ const DefaultFooter = () => {
                 style={{ width: 140 }}
               />
               <p className="mil-light-soft mil-mb-30">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.
+                NexonGreen is a next-generation IT solutions provider delivering IoT, mobile apps, web design, WordPress, portfolio creation, and digital forensics services to businesses and individuals.
               </p>
               <a href="#." className="mil-app-btn mil-mb-5">
                 <i className="fab fa-google-play" />
@@ -44,8 +42,7 @@ const DefaultFooter = () => {
                     Experience
                   </h3>
                   <p className="mil-light-soft">
-                    Lorem ipsum dolor sit amet, consectetuer
-                    <br /> adipiscing elit, sed diam nonummy.
+                    Stay updated with our latest IT insights, projects, and service updates. Subscribe to the NexonGreen newsletter.
                   </p>
                 </div>
                 <div className="col-lg-5 mil-mb-30">
@@ -103,7 +100,7 @@ const DefaultFooter = () => {
       </div>
       <div className="mil-footer-bottom">
         <div className="container">
-          <p className="mil-text-sm mil-light">© NexonGreen 2024.</p>
+          <p className="mil-text-sm mil-light">© NexonGreen 2026.</p>
           <p className="mil-text-sm mil-light">All Rights Reserved.</p>
         </div>
       </div>

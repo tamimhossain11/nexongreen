@@ -3,34 +3,16 @@
     "title":  { "first": "What Our", "second": "Clients", "third": "Say" },
     "items": [
         {
-            "name": "Tamzyn French",
+            "name": "Mahadir Islam Wafi",
             "image": "img/faces/1.jpg",
-            "role": "Agency Design",
-            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+            "role": "CEO, Dreams of Bangladesh",
+            "text": "NexonGreen has been an outstanding technology partner for Dreams of Bangladesh. Their web development, mobile app, and personal portfolio services are truly world-class. They built our team's digital presence with professionalism and creativity that exceeded all our expectations. Highly recommended!"
         },
         {
-            "name": "Margaret Williams",
+            "name": "Imam Hossain",
             "image": "img/faces/2.jpg",
-            "role": "Agency Design",
-            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-        },
-        {
-            "name": "Tarryn Gillies",
-            "image": "img/faces/3.jpg",
-            "role": "Agency Design",
-            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-        },
-        {
-            "name": "Tamzyn French",
-            "image": "img/faces/4.jpg",
-            "role": "Agency Design",
-            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
-        },
-        {
-            "name": "Margaret Williams",
-            "image": "img/faces/5.jpg",
-            "role": "Agency Design",
-            "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+            "role": "Owner, Irfan Enterprise",
+            "text": "Working with NexonGreen was a fantastic experience. They delivered exactly what we needed — a clean, professional website that represents our business perfectly. Their team was responsive, skilled, and committed to quality at every step. We are very satisfied with the results."
         }
     ]
 }

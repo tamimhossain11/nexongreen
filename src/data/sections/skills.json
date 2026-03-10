@@ -1,35 +1,35 @@
 {
     "title": { "first": "Business", "second": "Success", "third": "With <br />Technology" },
     "subtitle": "Our Skill",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here.",
+    "description": "At NexonGreen, we combine technical expertise with creative thinking to deliver solutions that make a real impact. Our team is skilled across a wide range of modern technologies and platforms.",
     "items": [
-        {
-            "label": "Software Development",
-            "value": "65"
-        },
         {
             "label": "Web Development",
             "value": "90"
         },
         {
-            "label": "UX / UI Design",
-            "value": "50"
+            "label": "Mobile App Development",
+            "value": "85"
         },
         {
-            "label": "App Development",
-            "value": "95"
+            "label": "WordPress & CMS",
+            "value": "88"
         },
         {
-            "label": "Internet of Things",
-            "value": "60"
+            "label": "Internet of Things (IoT)",
+            "value": "75"
+        },
+        {
+            "label": "Digital Forensics (FTK)",
+            "value": "70"
         },
         {
             "label": "Artificial Intelligence",
-            "value": "90"
+            "value": "80"
         },
         {
-            "label": "Blockchain",
-            "value": "80"
+            "label": "Portfolio Design",
+            "value": "92"
         }
     ],
     "button": {

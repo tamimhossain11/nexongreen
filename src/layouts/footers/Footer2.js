@@ -10,7 +10,7 @@ const Footer2 = () => {
                 Join The <span className="mil-accent">NexonGreen</span> Experience
               </h3>
               <p className="mil-light-soft">
-                Duis autem vel eum iriure dolor in hendrerit in vulputate.
+                Stay updated with our latest IT insights, projects, and service updates. Subscribe to the NexonGreen newsletter.
               </p>
             </div>
             <div className="col-xl-6 mil-mb-60">
@@ -35,18 +35,18 @@ const Footer2 = () => {
                 className="mil-light mil-light-soft"
                 style={{ marginBottom: 45 }}
               >
-                2307 Beverley Rd Brooklyn, <br />
-                New York 11226 USA.
+                Purbachal, Dhaka, <br />
+                Bangladesh.
               </p>
               <ul className="mil-simple-list mil-mb-15">
                 <li className="mil-light">
-                  <span className="mil-accent">+07</span>&nbsp;
-                  <span className="mil-light-soft">0 002 00 05</span>
+                  <span className="mil-accent">Email:</span>&nbsp;
+                  <span className="mil-light-soft">info@nexongreen.com</span>
                 </li>
                 <li>
-                  <span className="mil-accent">info</span>
+                  <span className="mil-accent">Web:</span>
                   <span className="mil-light mil-light-soft">
-                    @mydomain.com
+                    &nbsp;nexongreen.com
                   </span>
                 </li>
               </ul>
@@ -79,19 +79,19 @@ const Footer2 = () => {
                   </h4>
                   <ul className="mil-hover-link-list mil-light">
                     <li>
-                      <a href="#.">Documentation</a>
+                      <a href="/contact">Contact Us</a>
                     </li>
                     <li>
-                      <a href="#.">Support</a>
+                      <a href="/faq">FAQs</a>
                     </li>
                     <li>
-                      <a href="#.">FAQs</a>
+                      <a href="/blog">Blog</a>
                     </li>
                     <li>
-                      <a href="#.">Download</a>
+                      <a href="/portfolio">Portfolio</a>
                     </li>
                     <li>
-                      <a href="#.">Sitemap</a>
+                      <a href="/careers">Careers</a>
                     </li>
                   </ul>
                 </div>
@@ -99,19 +99,19 @@ const Footer2 = () => {
                   <h4 className="mil-list-title mil-light mil-mb-60">Links</h4>
                   <ul className="mil-hover-link-list mil-light">
                     <li>
-                      <a href="#.">About Us</a>
+                      <a href="/about">About Us</a>
                     </li>
                     <li>
-                      <a href="#.">Terms &amp; condition</a>
+                      <a href="/team">Our Team</a>
+                    </li>
+                    <li>
+                      <a href="/contact">Get a Quote</a>
+                    </li>
+                    <li>
+                      <a href="#.">Terms &amp; Conditions</a>
                     </li>
                     <li>
                       <a href="#.">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#.">Partners</a>
-                    </li>
-                    <li>
-                      <a href="#.">Press</a>
                     </li>
                   </ul>
                 </div>
@@ -122,7 +122,7 @@ const Footer2 = () => {
       </div>
       <div className="mil-footer-bottom">
         <div className="container">
-          <p className="mil-text-sm mil-light">© NexonGreen 2023.</p>
+          <p className="mil-text-sm mil-light">© NexonGreen 2026.</p>
           <p className="mil-text-sm mil-light">All Rights Reserved.</p>
         </div>
       </div>

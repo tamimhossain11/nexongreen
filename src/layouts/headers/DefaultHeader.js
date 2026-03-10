@@ -34,9 +34,8 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
         </div>
       )}
       <div
-        className={`mil-top-panel ${
-          transparent ? "mil-top-panel-transparent mil-animated" : ""
-        }`}
+        className={`mil-top-panel ${transparent ? "mil-top-panel-transparent mil-animated" : ""
+          }`}
       >
         {/* mil-top-panel-transparent */}
         <div className="container">
@@ -49,9 +48,6 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
                 <li className="mil-has-children">
                   <Link href="/">Enterprise</Link>
                   <ul>
-                    <li>
-                      <Link href="home-2">Home V2</Link>
-                    </li>
                     <li>
                       <Link href="about">About us</Link>
                     </li>
@@ -82,16 +78,16 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
                   <Link href="service-1">Services</Link>
                   <ul>
                     <li>
-                      <Link href="service-1">Service 1</Link>
+                      <Link href="service-1">SAAS Development</Link>
                     </li>
                     <li>
-                      <Link href="service-2">Service 2</Link>
+                      <Link href="service-2">UI/UX Design</Link>
                     </li>
                     <li>
-                      <Link href="service-3">Service 3</Link>
+                      <Link href="service-3">Mobile App Development</Link>
                     </li>
                     <li>
-                      <Link href="service-4">Service 4</Link>
+                      <Link href="service-4">Cyber Security</Link>
                     </li>
                   </ul>
                 </li>

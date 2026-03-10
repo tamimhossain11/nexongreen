@@ -5,21 +5,21 @@
         "items": [
             {
                 "num": "01",
-                "name": "Dedicated Team",
-                "icon": "img/icons/md/1.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "name": "Internet of Things (IoT)",
+                "icon": "img/icons/md/6.svg",
+                "text": "We build and integrate smart IoT solutions that connect physical devices to digital systems, enabling automation, monitoring, and real-time data collection for homes and businesses."
             },
             {
                 "num": "02",
-                "name": "QA and Testing",
+                "name": "Mobile App Development",
                 "icon": "img/icons/md/2.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "text": "We develop high-performance mobile applications for Android and iOS, crafting intuitive interfaces and robust back-end integrations tailored to your unique business needs."
             },
             {
                 "num": "03",
-                "name": "SaaS",
+                "name": "Website Design & WordPress",
                 "icon": "img/icons/md/3.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "text": "From custom-designed websites to fully functional WordPress platforms, we deliver responsive, SEO-friendly, and visually compelling web experiences for all types of businesses."
             }
         ]
     },
@@ -28,21 +28,21 @@
         "items": [
             {
                 "num": "04",
-                "name": "Blockchain",
-                "icon": "img/icons/md/4.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "name": "Personal Portfolio Creation",
+                "icon": "img/icons/md/1.svg",
+                "text": "We design and develop professional personal portfolio websites that showcase your skills, projects, and achievements — helping you stand out in a competitive digital world."
             },
             {
                 "num": "05",
-                "name": "Artificial Intelligence",
+                "name": "Digital Forensics (FTK)",
                 "icon": "img/icons/md/5.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "text": "We provide professional digital forensics support using industry-standard tools like FTK (Forensic Tool Kit), assisting organizations in evidence collection, analysis, and incident investigations."
             },
             {
                 "num": "06",
-                "name": "Internet of Things",
-                "icon": "img/icons/md/6.svg",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "name": "Artificial Intelligence",
+                "icon": "img/icons/md/4.svg",
+                "text": "We leverage AI to build intelligent systems and data-driven solutions — from machine learning models to computer vision and automation pipelines for modern enterprises."
             }
         ]
     }

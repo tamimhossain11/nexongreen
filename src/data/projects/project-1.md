@@ -1,9 +1,9 @@
 ---
 #preview
-title: Easy & Most Powerful Server Platform.
-image: img/projects/1.jpg
-author: Jane Meldrum
-short: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+title: DoB Joljan — RoboBoat 2026 ASV Team
+image: Projects/joljan.png
+author: Dreams of Bangladesh
+short: DoB Joljan represented Bangladesh in RoboBoat 2026, designing and deploying an autonomous robotic boat using computer vision, sensors, and intelligent navigation algorithms.
 
 #full details
 

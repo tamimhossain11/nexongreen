@@ -3,24 +3,24 @@
     "subtitle": "Discover Our Company",
     "items": [
         {
-            "name": "Thinking Big",
+            "name": "Understand Your Needs",
             "icon": "/img/icons/sm/1.svg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "text": "We start by listening. Our team takes time to fully understand your goals, challenges, and vision before proposing any solution."
         },
         {
-            "name": "Starting Small",
+            "name": "Plan & Design",
             "icon": "/img/icons/sm/2.svg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "text": "We craft a clear roadmap and design strategy tailored to your project — ensuring every decision is purposeful, scalable, and aligned with your objectives."
         },
         {
-            "name": "Creating Fast",
+            "name": "Build & Deliver",
             "icon": "/img/icons/sm/3.svg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "text": "Our skilled developers and designers execute with precision and speed, delivering high-quality solutions on time and within scope."
         },
         {
-            "name": "Innovating Scale",
+            "name": "Support & Grow",
             "icon": "/img/icons/sm/4.svg",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "text": "We don't just hand over and leave. We provide ongoing support, maintenance, and improvements to help your product scale and evolve."
         }
     ],
     "button1": {
