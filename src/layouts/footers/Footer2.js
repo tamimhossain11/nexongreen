@@ -43,7 +43,7 @@ const Footer2 = () => {
               <ul className="mil-simple-list mil-mb-15">
                 <li className="mil-light">
                   <span className="mil-accent">Email:</span>&nbsp;
-                  <span className="mil-light-soft">info@nexongreen.com</span>
+                  <span className="mil-light-soft">nexongreenltd@gmail.com</span>
                 </li>
                 <li>
                   <span className="mil-accent">Web:</span>

@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
+  const isHome = router.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -22,7 +25,7 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
               <li>
                 Phone: <span className="mil-accent">+ 01</span> 800 070 404
               </li>
-              <li>Info@mydomain.com</li>
+              <li>nexongreenltd@gmail.com</li>
             </ul>
             <div className="mil-ap-call-to-action">
               <div className="mil-icon-frame mil-icon-frame-sm">
@@ -49,7 +52,7 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
         <div className="container">
           <Link href="/" legacyBehavior>
             <a className="mil-logo" style={{ width: 120, backgroundImage: "none" }}>
-              <img src={scrolled ? "/logo4.png" : "/logo3.png"} alt="NexonGreen" style={{ width: 110, height: "auto" }} />
+              <img src={(isHome && !scrolled) ? "/logo3.png" : "/logo3-dark.png"} alt="NexonGreen" style={{ width: 110, height: "auto", transition: "opacity 0.3s ease" }} />
             </a>
           </Link>
           <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
@@ -69,23 +72,20 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <Link href="portfolio">Case Studies</Link>
-                </li>
                 <li className="mil-has-children">
                   <Link href="service-1">Services</Link>
                   <ul>
                     <li>
-                      <Link href="service-1">SAAS Development</Link>
+                      <Link href="service-1">IoT Solutions</Link>
                     </li>
                     <li>
-                      <Link href="service-2">UI/UX Design</Link>
+                      <Link href="service-2">Mobile App Development</Link>
                     </li>
                     <li>
-                      <Link href="service-3">Mobile App Development</Link>
+                      <Link href="service-3">Website Design & WordPress</Link>
                     </li>
                     <li>
-                      <Link href="service-4">Cyber Security</Link>
+                      <Link href="service-4">Digital Forensics</Link>
                     </li>
                   </ul>
                 </li>
@@ -93,13 +93,13 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
                   <Link href="solution-1">Solutions</Link>
                   <ul>
                     <li>
-                      <Link href="solution-1">Solution 1</Link>
+                      <Link href="solution-1">For Businesses</Link>
                     </li>
                     <li>
-                      <Link href="solution-2">Solution 2</Link>
+                      <Link href="solution-2">For Startups</Link>
                     </li>
                     <li>
-                      <Link href="solution-3">Solution 3</Link>
+                      <Link href="solution-3">For Individuals</Link>
                     </li>
                   </ul>
                 </li>

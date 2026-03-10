@@ -178,7 +178,7 @@ const Contact = () => {
       <div>
         <div className="mil-map-frame">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.289421122936!2d-74.0577166!3d40.7107384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250aee3ee6da7%3A0xe8a316c6c836011f!2sBuddy's%20JC!5e0!3m2!1sen!2sua!4v1682071433844!5m2!1sen!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2761193910905!2d90.37200197610664!3d23.74629158941338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf4f16a50c99%3A0x8fa563e3c8a56b56!2sDhanmondi%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1710000000000!5m2!1sen!2sbd"
             width={600}
             height={450}
             style={{ border: 0 }}
@@ -193,56 +193,20 @@ const Contact = () => {
       {/* contact info */}
       <section className="mil-p-120-60">
         <div className="container">
-          <div className="row">
-            <div className="col-xl-4">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-8">
               <div className="mil-mb-60">
-                <h4 className="mil-mb-30">United States</h4>
-                <h5 className="mil-list-title mil-mb-15">New York</h5>
+                <h4 className="mil-mb-30">Bangladesh</h4>
+                <h5 className="mil-list-title mil-mb-15">Dhaka — Dhanmondi</h5>
                 <p className="mil-mb-30">
-                  525, North Tryon Street, Suite 1600, Charlotte, NC 28202-0213
+                  House 12, Road 4, Dhanmondi, Dhaka-1205, Bangladesh
                 </p>
                 <div className="mil-divider mil-divider-left mil-mb-30" />
                 <h6 className="mil-mb-15">
-                  <span className="mil-accent">+ 90</span> 700 300 000
+                  <span className="mil-accent">+880</span> 1700-000000
                 </h6>
                 <h6>
-                  <span className="mil-accent">usa</span>.support@mydomain.com
-                </h6>
-              </div>
-            </div>
-            <div className="col-xl-4">
-              <div className="mil-mb-60">
-                <h4 className="mil-mb-30">Germany</h4>
-                <h5 className="mil-list-title mil-mb-15">Berlin</h5>
-                <p className="mil-mb-30">
-                  501, Satyamev Eminence, Science City Road, Ahmedabad, Gujarat
-                  - 380060
-                </p>
-                <div className="mil-divider mil-divider-left mil-mb-30" />
-                <h6 className="mil-mb-15">
-                  <span className="mil-accent">+ 90</span> 700 300 000
-                </h6>
-                <h6>
-                  <span className="mil-accent">germany</span>
-                  .support@mydomain.com
-                </h6>
-              </div>
-            </div>
-            <div className="col-xl-4">
-              <div className="mil-mb-60">
-                <h4 className="mil-mb-30">France</h4>
-                <h5 className="mil-list-title mil-mb-15">Paris</h5>
-                <p className="mil-mb-30">
-                  397 Bedford Highway, Suite 323 Halifax NS B3M 2L3 Science City
-                  Road
-                </p>
-                <div className="mil-divider mil-divider-left mil-mb-30" />
-                <h6 className="mil-mb-15">
-                  <span className="mil-accent">+ 90</span> 700 300 000
-                </h6>
-                <h6>
-                  <span className="mil-accent">france</span>
-                  .support@mydomain.com
+                  <span className="mil-accent">nexongreenltd</span>@gmail.com
                 </h6>
               </div>
             </div>

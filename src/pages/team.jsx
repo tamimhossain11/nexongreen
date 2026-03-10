@@ -37,7 +37,7 @@ const team = [
   },
   {
     name: "Tamim Hossain",
-    role: "Chief Technology Officer (CTO)",
+    role: "CTO & Founder",
     image: "/team/tamim.jpeg",
     bio: "Tamim Hossain is a Software Engineer and CTO at Nexon Green with a BSc in Software Engineering from the University of Roehampton. He is also CTO of Dreams of Bangladesh (robotics) and a Product Engineer at BIMS Philippines. He specializes in AI, IoT, backend systems, and automation engineering — building scalable, future-ready digital solutions.",
     skills: [

@@ -1,209 +1,70 @@
-import ContactForm from "../components/ContactForm";
 import PageBanner from "../components/PageBanner";
 import Layouts from "../layouts/Layouts";
-
-import dynamic from "next/dynamic";
-const Solution2LeftTabSlider = dynamic(
-  () => import("../components/sliders/Solution2LeftTabSlider"),
-  {
-    ssr: false,
-  }
-);
-
-const Solution2ReviSlider = dynamic(
-  () => import("../components/sliders/Solution2ReviSlider"),
-  {
-    ssr: false,
-  }
-);
-
-const Solution2TabSlider = dynamic(
-  () => import("../components/sliders/Solution2TabSlider"),
-  {
-    ssr: false,
-  }
-);
+import Link from "next/link";
 
 const Solution2 = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner pageName={"Solution"} pageTitle={"Big data"} />
-      {/* ??? */}
+      <PageBanner pageName={"Solutions"} pageTitle={"For Startups"} />
+
       <section className="mil-p-120-90">
         <div className="container">
-          <h2 className="mil-mb-60">
-            Making <span className="mil-accent">Business</span> Sense of{" "}
-            <span className="mil-accent">Your Data</span> for Any User,
-            <br /> Anytime, Anywhere
-          </h2>
-          <p className="mil-mb-60">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of text. All the Lorem Ipsum generators on the Internet tend
-            to repeat predefined chunks as necessary, making this the first true
-            generator on the Internet. It uses a dictionary of over 200 Latin
-            words, combined with a handful of model sentence structures, to
-            generate Lorem Ipsum which looks reasonable. The generated Lorem
-            Ipsum is therefore always free from repetition, injected humour, or
-            non-characteristic words etc.
-          </p>
-          <div className="row">
-            <div className="col-lg-3">
-              <div className="mil-hover-card mil-price-card mil-card-only-30 mil-mb-30">
-                <div className="mil-icon-box-2">
-                  <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                    <img src="img/icons/md/17.svg" alt="icon" />
-                  </div>
-                  <div className="mil-box-text">
-                    <h6 className="mil-box-text">
-                      Enable a Single Source <br />
-                      of Truth
-                    </h6>
-                  </div>
-                </div>
-              </div>
+          <div className="row align-items-center">
+            <div className="col-lg-6 mil-mb-60">
+              <span className="mil-suptitle mil-suptitle-2 mil-mb-30">Startup Technology Partner</span>
+              <h2 className="mil-mb-30">Launch Fast, <span className="mil-accent">Build Smart</span></h2>
+              <p className="mil-mb-30">
+                NexonGreen is the ideal technology partner for startups. We help early-stage companies build their MVP, establish their digital presence, and create systems that scale as they grow — all within startup-friendly budgets and timelines.
+              </p>
+              <Link href="/contact" className="mil-button mil-border"><span>Let us Help You Launch</span></Link>
             </div>
-            <div className="col-lg-3">
-              <div className="mil-hover-card mil-price-card mil-card-only-30 mil-mb-30">
-                <div className="mil-icon-box-2">
-                  <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                    <img src="img/icons/md/19.svg" alt="icon" />
-                  </div>
-                  <div className="mil-box-text">
-                    <h6 className="mil-box-text">
-                      Democratize Your <br />
-                      Data Safely
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="mil-hover-card mil-price-card mil-card-only-30 mil-mb-30">
-                <div className="mil-icon-box-2">
-                  <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                    <img src="img/icons/md/18.svg" alt="icon" />
-                  </div>
-                  <div className="mil-box-text">
-                    <h6 className="mil-box-text">
-                      Foster a Data Culture For Efficiency
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="mil-hover-card mil-price-card mil-card-only-30 mil-mb-30">
-                <div className="mil-icon-box-2">
-                  <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                    <img src="img/icons/md/11.svg" alt="icon" />
-                  </div>
-                  <div className="mil-box-text">
-                    <h6 className="mil-box-text">
-                      Scale UP With an AI-Ready Infrastructure
-                    </h6>
-                  </div>
-                </div>
+            <div className="col-lg-6 mil-mb-60">
+              <div style={{ borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.12)" }}>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Startup Solutions" style={{ width: "100%", height: 380, objectFit: "cover" }} />
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* ??? end */}
-      <div className="container">
-        <div className="mil-divider" />
-      </div>
-      {/* ??? */}
 
-      <Solution2ReviSlider />
-      {/* ??? end */}
-      <div className="container">
-        <div className="mil-divider" />
-      </div>
-      {/* ??? */}
-      <Solution2TabSlider />
-      {/* ??? end */}
-      <div className="container">
-        <div className="mil-divider" />
-      </div>
-      {/* left nav tabs */}
-      <Solution2LeftTabSlider />
-      {/* left nav tabs end */}
-      <div className="container">
-        <div className="mil-divider" />
-      </div>
-      {/* ??? */}
-      <section className="mil-p-120-60">
-        <div className="mil-deco" style={{ top: 0, left: "15%" }} />
+      <div className="container"><div className="mil-divider" /></div>
+
+      <section className="mil-p-120-90">
         <div className="container">
-          <div className="mil-text-center mil-mb-90">
-            <span className="mil-suptitle mil-suptitle-2 mil-mb-30">
-              A Great Service
-            </span>
-            <h2 className="mil-mb-30">
-              Values That <span className="mil-accent">Lead Us</span>
-            </h2>
+          <div className="mil-mb-90">
+            <span className="mil-suptitle mil-suptitle-2 mil-mb-30">Startup Solutions</span>
+            <h2 className="mil-mb-30">What We Offer for Startups</h2>
           </div>
-          <div className="row">
-            <div className="col-lg-3">
-              <div className="mil-box-center mil-mb-60">
-                <div className="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
-                  <h3>I</h3>
+          <div className="row mil-mb-30-adapt">
+            {[
+              { n: "01", s: "mil-circle", t: "MVP Development", d: "We build your Minimum Viable Product quickly and efficiently so you can validate your idea with real users." },
+              { n: "02", s: "mil-lines", t: "Landing Page & Branding", d: "A professional brand identity and high-converting landing page to attract your first customers and investors." },
+              { n: "03", s: "", t: "Mobile App Development", d: "Cross-platform mobile apps built to launch fast and iterate based on user feedback and growth data." },
+              { n: "04", s: "", t: "Digital Marketing", d: "Growth marketing strategies including social media, SEO, and performance ads to build your early user base." },
+              { n: "05", s: "mil-circle", t: "SaaS Product Development", d: "From concept to cloud-hosted SaaS product — we architect, build, and deploy your software platform." },
+              { n: "06", s: "mil-lines", t: "Tech Consulting", d: "Strategic technology guidance to help founders make the right architectural and stack decisions early on." },
+            ].map((item, i) => (
+              <div key={i} className="col-xl-4">
+                <div className="mil-mb-60">
+                  <div className={`mil-number-icon ${item.s} mil-mb-30`}><span>{item.n}</span></div>
+                  <h4 className="mil-mb-15">{item.t}</h4>
+                  <p>{item.d}</p>
                 </div>
-                <h5 className="mil-mb-20">Productivity</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor ut labore magna aliqua.
-                </p>
               </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="mil-box-center mil-mb-60">
-                <div className="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
-                  <h3>II</h3>
-                </div>
-                <h5 className="mil-mb-20">Transparency</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor ut labore magna aliqua.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="mil-box-center mil-mb-60">
-                <div className="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
-                  <h3>III</h3>
-                </div>
-                <h5 className="mil-mb-20">Personality</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor ut labore magna aliqua.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-3">
-              <div className="mil-box-center mil-mb-60">
-                <div className="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
-                  <h3>IV</h3>
-                </div>
-                <h5 className="mil-mb-20">Volition</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor ut labore magna aliqua.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+          <Link href="/contact" className="mil-button mil-border mil-mb-30"><span>Talk to Us About Your Startup</span></Link>
         </div>
       </section>
-      {/* ??? end */}
-      {/* contact */}
-      {/* contact */}
-      <ContactForm />
-      {/* contact end */}
+
+      <section className="mil-gradient-bg mil-deco-right mil-p-120-0">
+        <div className="mil-deco mil-deco-accent" style={{ top: 0, left: "5%" }} />
+        <div className="container mil-text-center">
+          <h2 className="mil-light mil-mb-30">Have a Startup Idea? We Can Build It.</h2>
+          <p className="mil-light-soft mil-mb-60">NexonGreen works with founders at every stage — from idea validation to product launch and growth.</p>
+          <Link href="/contact" className="mil-button mil-border mil-light mil-mb-30"><span>Start the Conversation</span></Link>
+        </div>
+      </section>
     </Layouts>
   );
 };

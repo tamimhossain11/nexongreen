@@ -9,7 +9,7 @@ const Header2 = () => {
             <li>
               Phone: <span className="mil-accent">+ 01</span> 800 070 404
             </li>
-            <li>Info@mydomain.com</li>
+            <li>nexongreenltd@gmail.com</li>
           </ul>
           <div className="mil-ap-call-to-action">
             <div className="mil-icon-frame mil-icon-frame-sm">
