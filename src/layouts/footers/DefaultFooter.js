@@ -10,7 +10,7 @@ const DefaultFooter = () => {
                 src="/logo-trans.png"
                 alt="logo"
                 className="mil-logo mil-mb-30"
-                style={{ width: 140 }}
+                style={{ width: 110 }}
               />
               <p className="mil-light-soft mil-mb-30">
                 NexonGreen is a next-generation IT solutions provider delivering IoT, mobile apps, web design, WordPress, portfolio creation, and digital forensics services to businesses and individuals.

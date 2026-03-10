@@ -31,7 +31,7 @@ const Footer2 = () => {
                 src="/logo-trans.png"
                 alt="logo"
                 className="mil-logo mil-mb-60"
-                style={{ width: 140 }}
+                style={{ width: 110 }}
               />
               <p
                 className="mil-light mil-light-soft"
