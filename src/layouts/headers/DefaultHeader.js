@@ -1,8 +1,16 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
       className={`mil-top-position mil-fixed ${extarClass ? extarClass : ""}`}
@@ -40,8 +48,8 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
         {/* mil-top-panel-transparent */}
         <div className="container">
           <Link href="/" legacyBehavior>
-            <a className="mil-logo" style={{ width: 120 }}>
-              <img src="/logo1.png" alt="NexonGreen" style={{ width: 110, height: "auto" }} />
+            <a className="mil-logo" style={{ width: 120, backgroundImage: "none" }}>
+              <img src={scrolled ? "/logo4.png" : "/logo3.png"} alt="NexonGreen" style={{ width: 110, height: "auto" }} />
             </a>
           </Link>
           <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
@@ -57,19 +65,7 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
                       <Link href="team">Team</Link>
                     </li>
                     <li>
-                      <Link href="team-single">Team Member</Link>
-                    </li>
-                    <li>
-                      <Link href="careers">Careers</Link>
-                    </li>
-                    <li>
-                      <Link href="prices">Prices</Link>
-                    </li>
-                    <li>
                       <Link href="faq">FAQ</Link>
-                    </li>
-                    <li>
-                      <Link href="event">Event</Link>
                     </li>
                   </ul>
                 </li>
