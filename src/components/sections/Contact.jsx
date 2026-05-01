@@ -1,84 +1,129 @@
 import Content from "../../data/sections/contact.json";
 
+const CONTACT_INFO = [
+  { icon: "✉️", label: "Email Us", value: "nexongreenltd@gmail.com" },
+  { icon: "📍", label: "Location", value: "Bangladesh" },
+  { icon: "💬", label: "Response Time", value: "Within 24 hours" },
+];
+
 const ContactSection = () => {
   return (
-    <section className="mil-contact mil-gradient-bg mil-p-120-0">
-      <div
-        className="mil-deco mil-deco-accent"
-        style={{ top: 0, right: "10%" }}
-      />
-      <div className="container">
-        <h2 className="mil-light mil-mb-90">
-          {Content.title.first} <span className="mil-accent">{Content.title.second}</span>
-        </h2>
-        <form>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="mil-input-frame mil-mb-30">
-                <label>
-                  <span className="mil-light">Name</span>
-                  <span className="mil-accent">Required</span>
-                </label>
-                <input type="text" placeholder="Enter Your Name Here" />
-              </div>
-              <div className="mil-input-frame mil-mb-30">
-                <label>
-                  <span className="mil-light">Email Adress</span>
-                  <span className="mil-accent">Required</span>
-                </label>
-                <input type="email" id="email" placeholder="Your Email" />
-              </div>
-              <div className="mil-input-frame mil-mb-60">
-                <label>
-                  <span className="mil-light">Phone</span>
-                  <span className="mil-light-soft">Optional</span>
-                </label>
-                <input type="number" placeholder="Your Phone" />
-              </div>
-              <div className="mil-attach-frame mil-mb-60">
-                <i className="fas fa-paperclip" />
-                <label className="mil-custom-file-input">
-                  <span>Attach your file</span>
-                  <input type="file" id="mil-file-input" />
-                </label>
-                <p className="mil-text-sm mil-light-soft">up to 20MB</p>
-              </div>
+    <section className="ng-contact">
+      <div className="ng-container" style={{ position: "relative", zIndex: 1 }}>
+
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 64 }}>
+          <div className="ng-section-label" style={{ justifyContent: "center" }}>Get In Touch</div>
+          <h2 className="ng-section-title" style={{ maxWidth: 560, margin: "0 auto 16px" }}>
+            {Content.title.first} <span>{Content.title.second}</span>
+          </h2>
+          <p className="ng-section-desc" style={{ margin: "0 auto", textAlign: "center" }}>
+            Ready to build something great? Send us a message and our team will get back to you within 24 hours.
+          </p>
+        </div>
+
+        <div className="ng-row" style={{ alignItems: "flex-start", gap: 40 }}>
+
+          {/* Left: contact info + quick links */}
+          <div style={{ flex: "0 0 320px" }}>
+            <div className="ng-contact-info">
+              {CONTACT_INFO.map((item, i) => (
+                <div className="ng-contact-info-item" key={i}>
+                  <div className="ng-contact-info-item__icon">{item.icon}</div>
+                  <div>
+                    <div className="ng-contact-info-item__label">{item.label}</div>
+                    <div className="ng-contact-info-item__value">{item.value}</div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="col-lg-6">
-              <div className="mil-input-frame mil-mb-30">
-                <label>
-                  <span className="mil-light">Email Adress</span>
-                  <span className="mil-accent">Required</span>
-                </label>
-                <textarea placeholder="Your Message" defaultValue={""} />
+
+            {/* CTA card */}
+            <div style={{
+              marginTop: 24,
+              background: "rgba(0,255,17,0.06)",
+              border: "1px solid rgba(0,255,17,0.15)",
+              borderRadius: 12,
+              padding: 24,
+            }}>
+              <div style={{ fontFamily: "var(--font-1)", fontSize: 16, fontWeight: 700, color: "var(--light)", marginBottom: 8 }}>
+                Need a Quick Quote?
               </div>
-              <p className="mil-text-sm mil-light-soft mil-mb-15">
-                We will process your personal information in accordance with
-                our Privacy Policy.
+              <p style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.6, marginBottom: 16 }}>
+                Describe your project and we'll send you a free estimate within 48 hours.
               </p>
-              <div className="mil-checbox-frame mil-mb-60">
-                <input
-                  className="mil-checkbox"
-                  id="checkbox-1"
-                  type="checkbox"
-                  defaultValue="value"
+              <a href="mailto:nexongreenltd@gmail.com" className="ng-btn-primary" style={{ fontSize: 13, padding: "12px 20px", display: "inline-flex" }}>
+                Email Directly
+              </a>
+            </div>
+          </div>
+
+          {/* Right: form */}
+          <div style={{ flex: 1 }}>
+            <div className="ng-form">
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div className="ng-form-group">
+                  <label className="ng-form-label">Full Name <span style={{ color: "var(--accent)" }}>*</span></label>
+                  <input className="ng-form-input" type="text" placeholder="John Doe" />
+                </div>
+                <div className="ng-form-group">
+                  <label className="ng-form-label">Email Address <span style={{ color: "var(--accent)" }}>*</span></label>
+                  <input className="ng-form-input" type="email" placeholder="john@example.com" />
+                </div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div className="ng-form-group">
+                  <label className="ng-form-label">Phone <span style={{ color: "rgba(255,255,255,0.3)" }}>(optional)</span></label>
+                  <input className="ng-form-input" type="tel" placeholder="+880..." />
+                </div>
+                <div className="ng-form-group">
+                  <label className="ng-form-label">Service Needed</label>
+                  <select className="ng-form-input" style={{ appearance: "none", cursor: "pointer" }}>
+                    <option value="">Select a service</option>
+                    <option>IoT Solutions</option>
+                    <option>Mobile App Development</option>
+                    <option>Website Design & WordPress</option>
+                    <option>Personal Portfolio</option>
+                    <option>Digital Forensics</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="ng-form-group">
+                <label className="ng-form-label">Message <span style={{ color: "var(--accent)" }}>*</span></label>
+                <textarea
+                  className="ng-form-textarea"
+                  placeholder="Tell us about your project, goals, and timeline..."
+                  rows={5}
                 />
-                <label htmlFor="checkbox-1" className="mil-text-sm mil-light">
-                  I would like to be contacted with news and updates about
-                  your{" "}
-                  <a href="#." className="mil-accent">
-                    events and services
-                  </a>
+              </div>
+
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  style={{ width: 16, height: 16, accentColor: "var(--accent)", cursor: "pointer" }}
+                />
+                <label htmlFor="privacy" style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "rgba(255,255,255,0.5)", cursor: "pointer" }}>
+                  I agree to the{" "}
+                  <a href="#." style={{ color: "var(--accent)", textDecoration: "none" }}>Privacy Policy</a>{" "}
+                  and consent to being contacted.
                 </label>
               </div>
-            </div>
-            <div className="col-12">
-              <button className="mil-button mil-accent-bg mil-fw">
-                <span>Send Message Now</span>
+
+              <button className="ng-btn-primary" style={{ width: "100%", justifyContent: "center", fontSize: 15 }}>
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8l10 0M8 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </div>
-        </form>
+
+        </div>
       </div>
     </section>
   );

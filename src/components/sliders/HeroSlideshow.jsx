@@ -1,82 +1,120 @@
-import { sliderProps } from "../../common/sliderProps";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Content from "../../data/sliders/hero-slideshow.json";
+import dynamic from "next/dynamic";
 
-const Home1BannerSlider = () => {
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import techOrbitAnimation from "../../../public/animations/tech-orbit.json";
+
+const HeroSection = () => {
   return (
-    <div className="mil-banner mil-top-space-0">
-      <Swiper
-        {...sliderProps.milBannersSlider}
-        className="swiper-container mil-banner-slideshow"
-      >
-        {Content.slides.map((slide, key) => (
-        <SwiperSlide className="swiper-slide">
-          <img
-            src={slide.image}
-            className="mil-background-image"
-            style={{ objectPosition: "center" }}
-            data-swiper-parallax={-100}
-            data-swiper-parallax-scale="1.1"
-            alt="image"
-          />
-        </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="mil-overlay" />
-      <div className="mil-banner-content">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-8">
-              <span className="mil-suptitle mil-mb-60">
-                <span className="mil-light">{Content.subtitle.first}</span>{" "}
-                <span className="mil-accent">{Content.subtitle.second}</span>
-              </span>
-              <h1 className="mil-mb-60">
-                <span dangerouslySetInnerHTML={{__html : Content.title.first}} className="mil-uppercase mil-light" />{" "}
-                <span className="mil-font-3 mil-accent">{Content.title.second}</span>
-              </h1>
-              <div className="mil-flex-hori-center">
-                <div>
-                  <Link
-                    href={Content.button.link}
-                    className="mil-button mil-border mil-light"
-                  >
-                    <span>{Content.button.label}</span>
-                  </Link>
-                </div>
-                <p className="mil-button-descr mil-light-soft">
-                  {Content.description}
-                </p>
-              </div>
+    <section className="ng-hero">
+      <div className="ng-hero__bg-grid" />
+      <div className="ng-hero__orb-1" />
+      <div className="ng-hero__orb-2" />
+
+      <div className="ng-container" style={{ position: "relative", zIndex: 1, width: "100%" }}>
+        <div className="ng-row" style={{ minHeight: "80vh", alignItems: "center" }}>
+
+          {/* Left Content */}
+          <div className="ng-row__half" style={{ maxWidth: 640 }}>
+            <div className="ng-hero__badge">
+              <span className="ng-hero__badge-dot" />
+              Next-Generation IT Solutions
             </div>
-            <div className="col-xl-4">
-              <div className="mil-illustration-1">
-                {Content.items.map((item, key) => (
-                <div className={`mil-item mil-item-${key+1}`}>
-                  <div className="mil-plus">
-                    <div className="mil-hover-window">
-                      <div className="mil-window-content">
-                        <h5 className="mil-dark mil-mb-15">{item.title}</h5>
-                        <div className="mil-divider mil-divider-left mil-mb-15" />
-                        <p className="mil-text-sm">
-                          {item.text}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mil-item-hover">
-                      <div className="mil-plus-icon">+</div>
-                      <h6 className="mil-light">{item.label}</h6>
-                    </div>
-                  </div>
-                </div>
-                ))}
+
+            <h1 className="ng-hero__title">
+              Powering Your
+              <span className="ng-hero__title-accent">Digital Future</span>
+            </h1>
+
+            <p className="ng-hero__subtitle">
+              NexonGreen delivers cutting-edge technology — from IoT systems and mobile apps
+              to AI-driven platforms, web design, and digital forensics. Built for the modern world.
+            </p>
+
+            <div className="ng-hero__actions">
+              <Link href="/contact" className="ng-btn-primary">
+                Start Your Project
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+              <Link href="/service-1" className="ng-btn-outline">
+                Explore Services
+              </Link>
+            </div>
+
+            <div className="ng-hero__stats">
+              <div className="ng-hero__stat-item">
+                <span className="ng-hero__stat-number">200+</span>
+                <span className="ng-hero__stat-label">Projects Done</span>
+              </div>
+              <div className="ng-hero__stat-item">
+                <span className="ng-hero__stat-number">50+</span>
+                <span className="ng-hero__stat-label">Happy Clients</span>
+              </div>
+              <div className="ng-hero__stat-item">
+                <span className="ng-hero__stat-number">98%</span>
+                <span className="ng-hero__stat-label">Satisfaction</span>
               </div>
             </div>
           </div>
+
+          {/* Right Visual — Lottie Animation */}
+          <div className="ng-row__half ng-hero__visual">
+            <div style={{ position: "relative", width: "100%", maxWidth: 520, aspectRatio: "1 / 1" }}>
+              {/* Glow behind lottie */}
+              <div style={{
+                position: "absolute",
+                inset: "10%",
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(0,255,17,0.08) 0%, transparent 70%)",
+                filter: "blur(30px)",
+                pointerEvents: "none",
+              }} />
+              <Lottie
+                animationData={techOrbitAnimation}
+                loop
+                autoplay
+                style={{ width: "100%", height: "100%" }}
+              />
+
+              {/* Floating stat cards */}
+              <div style={{
+                position: "absolute",
+                top: "8%",
+                left: "0%",
+                background: "rgba(18,24,32,0.9)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(0,255,17,0.2)",
+                borderRadius: "10px",
+                padding: "14px 18px",
+                minWidth: 140,
+              }}>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-2)", marginBottom: 4, textTransform: "uppercase", letterSpacing: "1px" }}>Active Projects</div>
+                <div style={{ fontSize: 22, fontFamily: "var(--font-1)", fontWeight: 800, color: "#00ff11" }}>24 Live</div>
+              </div>
+
+              <div style={{
+                position: "absolute",
+                bottom: "12%",
+                right: "0%",
+                background: "rgba(18,24,32,0.9)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(0,255,17,0.2)",
+                borderRadius: "10px",
+                padding: "14px 18px",
+                minWidth: 140,
+              }}>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-2)", marginBottom: 4, textTransform: "uppercase", letterSpacing: "1px" }}>Client Rated</div>
+                <div style={{ fontSize: 22, fontFamily: "var(--font-1)", fontWeight: 800, color: "#00ff11" }}>★ 4.9 / 5</div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-export default Home1BannerSlider;
+
+export default HeroSection;

@@ -1,110 +1,137 @@
+import Link from "next/link";
+
+const SERVICES_LINKS = [
+  { label: "IoT Solutions", href: "/service-1" },
+  { label: "Mobile App Development", href: "/service-2" },
+  { label: "Website Design & WordPress", href: "/service-3" },
+  { label: "Digital Forensics", href: "/service-4" },
+  { label: "Personal Portfolio", href: "/service-1" },
+  { label: "Artificial Intelligence", href: "/service-1" },
+];
+
+const COMPANY_LINKS = [
+  { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/team" },
+  { label: "Careers", href: "/careers" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
+const SOCIAL_LINKS = [
+  { icon: "f", label: "Facebook", href: "#." },
+  { icon: "in", label: "LinkedIn", href: "#." },
+  { icon: "tw", label: "Twitter", href: "#." },
+  { icon: "yt", label: "YouTube", href: "#." },
+  { icon: "ig", label: "Instagram", href: "#." },
+];
+
 const DefaultFooter = () => {
   return (
-    <footer className="mil-dark-bg">
-      <img src="img/deco/map.png" alt="background" className="mil-footer-bg" />
-      <div className="container">
-        <div className="mil-footer-content mil-p-120-90">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-xl-4 mil-mb-30">
-              <img
-                src="/logo-trans.png"
-                alt="logo"
-                className="mil-logo mil-mb-30"
-                style={{ width: 110 }}
-              />
-              <p className="mil-light-soft mil-mb-30">
-                NexonGreen is a next-generation IT solutions provider delivering IoT, mobile apps, web design, WordPress, portfolio creation, and digital forensics services to businesses and individuals.
-              </p>
-              <a href="#." className="mil-app-btn mil-mb-5">
-                <i className="fab fa-google-play" />
-                <div className="mil-app-text">
-                  <span className="mil-accent mil-text-sm">
-                    Available on the
-                  </span>
-                  <div className="mil-h6">Google Play</div>
-                </div>
-              </a>
-              <a href="#." className="mil-app-btn">
-                <i className="fab fa-apple" />
-                <div className="mil-app-text">
-                  <span className="mil-accent mil-text-sm">
-                    Download on the
-                  </span>
-                  <div className="mil-h6">App Store</div>
-                </div>
-              </a>
+    <footer className="ng-footer">
+      <div className="ng-container">
+        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.3fr", gap: 48 }}>
+
+          {/* Brand column */}
+          <div>
+            <div className="ng-footer__logo">
+              <img src="/logo-trans.png" alt="NexonGreen" style={{ width: 110, height: "auto" }} />
             </div>
-            <div className="col-xl-7 mil-mt-60-adapt">
-              <div className="row">
-                <div className="col-lg-7 mil-mb-30">
-                  <h3 className="mil-light mil-up-font mil-mb-30">
-                    Join The <span className="mil-accent">NexonGreen</span> <br />
-                    Experience
-                  </h3>
-                  <p className="mil-light-soft">
-                    Stay updated with our latest IT insights, projects, and service updates. Subscribe to the NexonGreen newsletter.
-                  </p>
-                </div>
-                <div className="col-lg-5 mil-mb-30">
-                  <form>
-                    <input
-                      className="mil-rounded-input mil-text-center mil-mb-5"
-                      type="text"
-                      placeholder="Your email address"
-                    />
-                    <button className="mil-button mil-accent-bg mil-fw">
-                      <span>Subscribe Now</span>
-                    </button>
-                  </form>
-                </div>
-              </div>
+            <p className="ng-footer__desc">
+              NexonGreen is a next-generation IT solutions provider — delivering IoT, mobile apps, web design, AI systems, and digital forensics services to businesses and individuals worldwide.
+            </p>
+            <div className="ng-footer__socials">
+              {SOCIAL_LINKS.map((s, i) => (
+                <a key={i} href={s.href} className="ng-footer__social-btn" aria-label={s.label}
+                   style={{ fontFamily: "var(--font-1)", fontSize: 11, fontWeight: 700, letterSpacing: "0.5px" }}>
+                  {s.icon}
+                </a>
+              ))}
+            </div>
+            <div style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "rgba(255,255,255,0.25)" }}>
+              <span style={{ color: "var(--accent)", marginRight: 6 }}>●</span>
+              Available for new projects
             </div>
           </div>
+
+          {/* Services column */}
+          <div>
+            <div className="ng-footer__col-title">Services</div>
+            <ul className="ng-footer__links">
+              {SERVICES_LINKS.map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="ng-footer__link">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company column */}
+          <div>
+            <div className="ng-footer__col-title">Company</div>
+            <ul className="ng-footer__links">
+              {COMPANY_LINKS.map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="ng-footer__link">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Newsletter column */}
+          <div>
+            <div className="ng-footer__col-title">Stay Updated</div>
+            <div className="ng-footer__newsletter">
+              <div className="ng-footer__newsletter-title">
+                Join the NexonGreen newsletter
+              </div>
+              <p className="ng-footer__newsletter-desc">
+                Get the latest IT insights, project showcases, and service updates delivered to your inbox.
+              </p>
+              <div className="ng-footer__newsletter-form" style={{ flexDirection: "column", gap: 10 }}>
+                <input
+                  className="ng-footer__newsletter-input"
+                  type="email"
+                  placeholder="your@email.com"
+                />
+                <button className="ng-footer__newsletter-btn" style={{ width: "100%" }}>
+                  Subscribe →
+                </button>
+              </div>
+            </div>
+
+            {/* Contact quick-info */}
+            <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 10 }}>
+              <a href="mailto:nexongreenltd@gmail.com" style={{
+                fontFamily: "var(--font-2)", fontSize: 13,
+                color: "rgba(255,255,255,0.45)", textDecoration: "none",
+                display: "flex", alignItems: "center", gap: 8,
+                transition: "color 0.2s ease"
+              }}
+                onMouseEnter={e => e.currentTarget.style.color = "var(--accent)"}
+                onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.45)"}
+              >
+                ✉ nexongreenltd@gmail.com
+              </a>
+            </div>
+          </div>
+
         </div>
-        <div className="mil-divider mil-light" />
-        <div className="mil-footer-links">
-          <ul className="mil-social mil-light">
-            <li className="mil-adapt-links">
-              <a href="#.">Facebook</a>
-              <a href="#.">FB</a>
-            </li>
-            <li className="mil-adapt-links">
-              <a href="#.">Instagram</a>
-              <a href="#.">IG</a>
-            </li>
-            <li className="mil-adapt-links">
-              <a href="#.">LinkedIn</a>
-              <a href="#.">IN</a>
-            </li>
-            <li className="mil-adapt-links">
-              <a href="#.">Twitter</a>
-              <a href="#.">TW</a>
-            </li>
-            <li className="mil-adapt-links">
-              <a href="#.">YouTube</a>
-              <a href="#.">YT</a>
-            </li>
-          </ul>
-          <ul className="mil-additional-links mil-light">
-            <li>
-              <a href="#.">Terms &amp; Condition</a>
-            </li>
-            <li>
-              <a href="#.">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#.">Sitemap</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="mil-footer-bottom">
-        <div className="container">
-          <p className="mil-text-sm mil-light">© NexonGreen 2026.</p>
-          <p className="mil-text-sm mil-light">All Rights Reserved.</p>
+
+        {/* Bottom bar */}
+        <div className="ng-footer__bottom">
+          <p className="ng-footer__copyright">
+            © {new Date().getFullYear()} NexonGreen. All Rights Reserved.
+          </p>
+          <div className="ng-footer__legal">
+            <a href="#." className="ng-footer__legal-link">Terms & Conditions</a>
+            <a href="#." className="ng-footer__legal-link">Privacy Policy</a>
+            <a href="#." className="ng-footer__legal-link">Sitemap</a>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
 export default DefaultFooter;
