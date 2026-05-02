@@ -1,420 +1,222 @@
-import ContactForm from "../components/ContactForm";
-import PageBanner from "../components/PageBanner";
 import Layouts from "../layouts/Layouts";
 import Link from "next/link";
 
-const About = () => {
-  return (
-    <Layouts>
-      <PageBanner pageName={"About Us"} pageTitle={"About NexonGreen"} />
+const STATS = [
+  { value: "3+", label: "Years of Experience" },
+  { value: "20+", label: "Projects Delivered" },
+  { value: "10+", label: "Mobile Apps Built" },
+  { value: "15+", label: "Websites Launched" },
+];
 
-      {/* intro statement */}
-      <section className="mil-p-120-60">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-12 col-xl-6">
-              <h4 className="mil-mb-60">
-                We are a next-generation IT company{" "}
-                <span className="mil-accent">built to power your digital future</span>{" "}
-                — from IoT and mobile apps to web design, portfolio creation, and digital forensics.
+const WHY_US = [
+  { title: "Full-Stack Expertise", desc: "We cover the full technology stack — from hardware IoT integration to front-end web interfaces and mobile apps. One team that understands the complete picture." },
+  { title: "Quality Without Compromise", desc: "Every project goes through thorough testing and quality review before it reaches you. We don't cut corners — because your reputation depends on what we build." },
+  { title: "Flexible & Client-Centered", desc: "We adapt to your workflow, budget, and timeline. Whether you need a quick landing page or a long-term tech partner, we structure engagement around what works for you." },
+  { title: "Fast Turnaround", desc: "Our agile approach means you see progress quickly, feedback is acted on immediately, and your product reaches completion on schedule — or ahead of it." },
+  { title: "Innovation-Driven", desc: "We stay at the forefront of technology — from AI-integrated applications to autonomous robotics. Our team continuously learns to keep your solutions ahead of the curve." },
+];
+
+const VALUES = [
+  { title: "We Are Passionate", desc: "Technology is not just our profession — it's our passion. We genuinely care about building things that work beautifully and solve real problems." },
+  { title: "We Go Deep", desc: "We don't skim the surface. Whether understanding your business requirements or debugging a complex system, we dig deep until we find the best solution." },
+  { title: "We Take Ownership", desc: "When we commit to a project, we treat it like it's our own. Your success is our success. We take full responsibility for everything we deliver." },
+  { title: "We Value Transparency", desc: "We believe in open, honest communication at every step. You'll always know where your project stands — no surprises, no runarounds." },
+  { title: "We Believe in Growth", desc: "We invest in our team's continuous learning. The technology landscape evolves fast — and so do we, ensuring clients always get the best available solutions." },
+  { title: "We Say \"We\"", desc: "No individual egos — we operate as one team. Every project is a collective effort and every win belongs to all of us. That spirit makes NexonGreen exceptional." },
+];
+
+const About = () => (
+  <Layouts>
+
+    {/* ── Page Banner ── */}
+    <div style={{
+      position: "relative",
+      paddingTop: 160, paddingBottom: 90,
+      background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(91,174,47,0.08) 0%, transparent 65%), linear-gradient(160deg,#0b0c09 0%,#0d0e0b 100%)",
+      overflow: "hidden",
+      textAlign: "center",
+    }}>
+      <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(91,174,47,0.14) 1px,transparent 1px)", backgroundSize: "36px 36px", opacity: 0.3, pointerEvents: "none" }} />
+      <div className="ng-container" style={{ position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 18 }}>
+          <Link href="/" style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "rgba(255,255,255,0.2)", fontSize: 11 }}>›</span>
+          <span style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "var(--accent)" }}>About Us</span>
+        </div>
+        <h1 style={{ fontFamily: "var(--font-1)", fontSize: "clamp(36px,6vw,62px)", fontWeight: 800, color: "var(--light)", lineHeight: 1.1, marginBottom: 20 }}>
+          About <span style={{ color: "var(--accent)" }}>NexonGreen</span>
+        </h1>
+        <p style={{ fontFamily: "var(--font-2)", fontSize: 17, color: "rgba(255,255,255,0.55)", maxWidth: 560, margin: "0 auto" }}>
+          A next-generation IT company built to power your digital future.
+        </p>
+      </div>
+    </div>
+
+    {/* ── Intro ── */}
+    <section style={{ padding: "96px 0 72px" }}>
+      <div className="ng-container">
+        <div className="ng-row" style={{ alignItems: "center", gap: 60 }}>
+          <div className="ng-row__half">
+            <div className="ng-section-label">Who We Are</div>
+            <h2 className="ng-section-title">
+              Specializing in <span>Transforming Your Vision</span> Into Real Digital Products
+            </h2>
+            <p className="ng-section-desc" style={{ marginTop: 16, marginBottom: 32 }}>
+              NexonGreen is an IT solutions company based in Purbachal, Dhaka, Bangladesh. Founded with a single purpose: to help businesses and individuals harness the full power of modern technology. From startups needing their first website to established organizations seeking IoT integration or digital forensics support — we are the team that gets it done.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Link href="/contact" className="ng-btn-primary">Talk To an Expert</Link>
+              <Link href="/portfolio" className="ng-btn-outline">View Our Work</Link>
+            </div>
+          </div>
+          <div className="ng-row__half">
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {["IoT system design and integration", "Mobile app development (Android & iOS)", "Website design & WordPress development", "Personal portfolio creation", "Digital forensics support with FTK", "Artificial Intelligence & ML solutions"].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 14, padding: "13px 16px", background: "rgba(91,174,47,0.04)", border: "1px solid rgba(91,174,47,0.10)", borderRadius: 8 }}>
+                  <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--accent)", flexShrink: 0 }} />
+                  <span style={{ fontFamily: "var(--font-2)", fontSize: 14, color: "rgba(255,255,255,0.75)" }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Stats ── */}
+    <section style={{ padding: "72px 0", background: "rgba(91,174,47,0.03)", borderTop: "1px solid rgba(91,174,47,0.08)", borderBottom: "1px solid rgba(91,174,47,0.08)" }}>
+      <div className="ng-container">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 2 }}>
+          {STATS.map((s, i) => (
+            <div key={i} style={{ textAlign: "center", padding: "32px 20px", borderRight: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+              <div style={{ fontFamily: "var(--font-1)", fontSize: 46, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 10 }}>{s.value}</div>
+              <div style={{ fontFamily: "var(--font-2)", fontSize: 13, color: "rgba(255,255,255,0.45)", letterSpacing: 0.5 }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── Mission ── */}
+    <section style={{ padding: "96px 0 72px" }}>
+      <div className="ng-container">
+        <div className="ng-row" style={{ alignItems: "center", gap: 60 }}>
+          <div className="ng-row__half" style={{ order: 2 }}>
+            <div style={{ borderRadius: 20, overflow: "hidden", border: "1px solid rgba(91,174,47,0.12)", aspectRatio: "4/3" }}>
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700&auto=format&fit=crop" alt="Our Mission" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+          </div>
+          <div className="ng-row__half" style={{ order: 1 }}>
+            <div className="ng-section-label">Our Purpose</div>
+            <h2 className="ng-section-title">Our <span>Mission</span></h2>
+            <p className="ng-section-desc" style={{ marginTop: 16, marginBottom: 28 }}>
+              Our mission is to make powerful technology accessible to everyone — from individual professionals who need a standout portfolio, to companies that need complex IoT systems or forensic investigation support.
+            </p>
+            <p className="ng-section-desc" style={{ marginBottom: 32 }}>
+              We believe that great technology, built thoughtfully, changes outcomes. We are committed to delivering solutions that are reliable, scalable, and truly impactful for every client we work with.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {["Deliver technology that creates measurable impact.", "Build with quality, integrity, and attention to detail.", "Support clients throughout every stage of their journey."].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                  <span style={{ color: "var(--accent)", fontSize: 18, lineHeight: 1.4, flexShrink: 0 }}>✓</span>
+                  <span style={{ fontFamily: "var(--font-2)", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.6 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── Why Work With Us ── */}
+    <section style={{ padding: "96px 0", background: "rgba(18,20,16,0.6)", borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+      <div className="ng-container">
+        <div style={{ marginBottom: 60 }}>
+          <div className="ng-section-label">Discover NexonGreen</div>
+          <h2 className="ng-section-title">Why Work <span>With Us</span></h2>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          {WHY_US.map((item, i) => (
+            <div key={i} style={{
+              display: "grid", gridTemplateColumns: "280px 1fr",
+              padding: "28px 32px", gap: 40,
+              borderBottom: "1px solid rgba(255,255,255,0.05)",
+              transition: "background 0.2s ease",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "rgba(91,174,47,0.03)"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                <span style={{ fontFamily: "var(--font-1)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.2)", minWidth: 28 }}>
+                  0{i + 1}
+                </span>
+                <h4 style={{ fontFamily: "var(--font-1)", fontSize: 16, fontWeight: 700, color: "var(--light)", margin: 0, lineHeight: 1.3 }}>
+                  {item.title}
+                </h4>
+              </div>
+              <p style={{ fontFamily: "var(--font-2)", fontSize: 14, color: "rgba(255,255,255,0.55)", margin: 0, lineHeight: 1.75 }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── Values ── */}
+    <section style={{ padding: "96px 0 72px" }}>
+      <div className="ng-container">
+        <div style={{ marginBottom: 60 }}>
+          <div className="ng-section-label">Our Culture</div>
+          <h2 className="ng-section-title">We Live by <span>Powerful Values</span></h2>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 20 }}>
+          {VALUES.map((v, i) => (
+            <div key={i} style={{
+              background: "rgba(18,20,16,0.7)",
+              border: "1px solid rgba(91,174,47,0.10)",
+              borderRadius: 14,
+              padding: "28px 28px 32px",
+              transition: "border-color 0.2s ease, transform 0.2s ease",
+            }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(91,174,47,0.28)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(91,174,47,0.10)"; e.currentTarget.style.transform = "translateY(0)"; }}
+            >
+              <div style={{ fontFamily: "var(--font-1)", fontSize: 11, fontWeight: 700, color: "var(--accent)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 14 }}>
+                {String(i + 1).padStart(2, "0")}
+              </div>
+              <h4 style={{ fontFamily: "var(--font-1)", fontSize: 16, fontWeight: 700, color: "var(--light)", marginBottom: 12 }}>
+                {v.title}
               </h4>
-            </div>
-            <div className="col-lg-12 col-xl-6">
-              <div className="mil-adaptive-right">
-                <Link
-                  href="/contact"
-                  className="mil-button mil-border mil-mr-15 mil-mb-30"
-                >
-                  <span>Talk To an Expert</span>
-                </Link>
-                <Link href="/portfolio" className="mil-button mil-border mil-mb-30">
-                  <span>View Our Work</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* intro statement end */}
-
-      {/* who we are */}
-      <section className="mil-deep-bg mil-p-120-60">
-        <div className="mil-deco" style={{ top: 0, left: "35%" }} />
-        <div className="container">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-lg-5 mil-mb-60">
-              <div className="mil-circle-illustration">
-                <div className="mil-circle-bg" />
-                <div className="mil-image-frame">
-                  <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
-                    alt="NexonGreen Team"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <span className="mil-suptitle mil-suptitle-2 mil-mb-30">
-                Who We Are
-              </span>
-              <h2 className="mil-mb-50">
-                We Specialize in <br />
-                <span className="mil-accent">Transforming Your Vision</span> Into
-                Real Digital Products
-              </h2>
-              <p className="mil-mb-50">
-                NexonGreen is an IT solutions company based in Purbachal, Dhaka, Bangladesh. We were founded with a single purpose: to help businesses and individuals harness the full power of modern technology. From startups that need their first website to established organizations seeking IoT integration or digital forensics support — we are the team that gets it done.
+              <p style={{ fontFamily: "var(--font-2)", fontSize: 13.5, color: "rgba(255,255,255,0.52)", lineHeight: 1.7, margin: 0 }}>
+                {v.desc}
               </p>
-              <div className="row align-items-end">
-                <div className="col-xl-7">
-                  <ul className="mil-check-icon-list mil-mb-60">
-                    <li>
-                      <img src="img/icons/sm/12.svg" alt="icon" />
-                      <span className="mil-dark">IoT system design and integration</span>
-                    </li>
-                    <li>
-                      <img src="img/icons/sm/12.svg" alt="icon" />
-                      <span className="mil-dark">Mobile app development (Android & iOS)</span>
-                    </li>
-                    <li>
-                      <img src="img/icons/sm/12.svg" alt="icon" />
-                      <span className="mil-dark">Website design & WordPress development</span>
-                    </li>
-                    <li>
-                      <img src="img/icons/sm/12.svg" alt="icon" />
-                      <span className="mil-dark">Personal portfolio creation</span>
-                    </li>
-                    <li>
-                      <img src="img/icons/sm/12.svg" alt="icon" />
-                      <span className="mil-dark">Digital forensics support with FTK</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-xl-5">
-                  <Link href="team" className="mil-post-sm mil-mb-60">
-                    <div className="mil-cover-frame">
-                      <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop"
-                        alt="NexonGreen Team"
-                      />
-                    </div>
-                    <div className="mil-description">
-                      <h4 className="mil-font-3 mil-accent">NexonGreen Team</h4>
-                      <p className="mil-text-sm">Purbachal, Dhaka, Bangladesh</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      {/* who we are end */}
-
-      {/* counters */}
-      <section className="mil-p-120-60">
-        <div className="mil-deco" style={{ top: 0, left: "25%" }} />
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-lg-5">
-              <div className="mil-h1">
-                3<span className="mil-accent">+</span>
-              </div>
-              <h6 className="mil-mb-60">Years of Experience</h6>
-              <h2 className="mil-mb-60">
-                We Deliver IT Services That Drive Real Results
-              </h2>
-            </div>
-            <div className="col-lg-6">
-              <h3 className="mil-mb-60">
-                Powering businesses with{" "}
-                <span className="mil-accent">next-generation technology</span> — built by a passionate team committed to{" "}
-                <span className="mil-accent">quality and innovation</span>
-              </h3>
-              <div className="row">
-                <div className="col-lg-6">
-                  <h6 className="mil-mb-30">
-                    <span className="mil-accent">20+</span>&nbsp; Projects Delivered
-                  </h6>
-                  <div className="mil-divider mil-divider-left mil-mb-60" />
-                </div>
-                <div className="col-lg-6">
-                  <h6 className="mil-mb-30">
-                    <span className="mil-accent">3+</span>&nbsp; Years Client Engagement
-                  </h6>
-                  <div className="mil-divider mil-divider-left mil-mb-60" />
-                </div>
-                <div className="col-lg-6">
-                  <h6 className="mil-mb-30">
-                    <span className="mil-accent">10+</span>&nbsp; Mobile Apps Built
-                  </h6>
-                  <div className="mil-divider mil-divider-left mil-mb-60" />
-                </div>
-                <div className="col-lg-6">
-                  <h6 className="mil-mb-30">
-                    <span className="mil-accent">15+</span>&nbsp; Websites Launched
-                  </h6>
-                  <div className="mil-divider mil-divider-left mil-mb-60" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* counters end */}
-
-      <div className="container">
-        <div className="mil-divider" />
-      </div>
-
-      {/* clients strip */}
-      <div className="mil-partners mil-p-120-90">
-        <div className="container">
-          <div className="mil-partners-frame">
-            <a href="#."><img src="img/partners/1.png" alt="partner" /></a>
-            <a href="#."><img src="img/partners/2.png" alt="partner" /></a>
-            <a href="#."><img src="img/partners/3.png" alt="partner" /></a>
-            <a href="#."><img src="img/partners/4.png" alt="partner" /></a>
-            <a href="#."><img src="img/partners/5.png" alt="partner" /></a>
-            <a href="#."><img src="img/partners/6.png" alt="partner" /></a>
-          </div>
+          ))}
         </div>
       </div>
-      {/* clients strip end */}
+    </section>
 
-      {/* mission */}
-      <section className="mil-deep-bg mil-p-120-60">
-        <div className="mil-deco" style={{ top: 0, right: "15%" }} />
-        <div className="container">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-lg-5 mil-mb-60">
-              <div className="mil-circle-illustration">
-                <div className="mil-circle-bg" />
-                <div className="mil-image-frame">
-                  <img
-                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&auto=format&fit=crop"
-                    alt="Our Mission"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 mil-mb-60">
-              <span className="mil-suptitle mil-suptitle-2 mil-mb-30">
-                Our Purpose
-              </span>
-              <h2 className="mil-mb-50">Our Mission</h2>
-              <p className="mil-mb-50">
-                Our mission is to make powerful technology accessible to everyone — from individual professionals who need a standout portfolio, to companies that need complex IoT systems or forensic investigation support. We believe that great technology, built thoughtfully, changes outcomes. We are committed to delivering solutions that are reliable, scalable, and truly impactful for every client we work with.
-              </p>
-              <ul className="mil-simple-list">
-                <li>Deliver technology that creates measurable impact.</li>
-                <li>Build with quality, integrity, and attention to detail.</li>
-                <li>Support clients throughout every stage of their journey.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* mission end */}
+    {/* ── CTA ── */}
+    <section style={{ padding: "80px 0", background: "rgba(91,174,47,0.04)", borderTop: "1px solid rgba(91,174,47,0.10)", textAlign: "center" }}>
+      <div className="ng-container">
+        <div className="ng-section-label" style={{ justifyContent: "center" }}>Let's Build Together</div>
+        <h2 className="ng-section-title" style={{ maxWidth: 520, margin: "0 auto 20px" }}>
+          Ready to Start Your <span>Project?</span>
+        </h2>
+        <p className="ng-section-desc" style={{ maxWidth: 460, margin: "0 auto 36px", textAlign: "center" }}>
+          Our team is ready to turn your ideas into powerful digital solutions. Let's start a conversation today.
+        </p>
+        <Link href="/contact" className="ng-btn-primary" style={{ fontSize: 15 }}>
+          Get in Touch
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Link>
+      </div>
+    </section>
 
-      {/* why work with us */}
-      <section className="mil-p-120-120">
-        <div className="container">
-          <span className="mil-suptitle mil-suptitle-2 mil-mb-30">
-            Discover NexonGreen
-          </span>
-          <h2 className="mil-mb-120">Why Work With Us</h2>
-          <div className="mil-divider" />
-          <div className="mil-line-icon-box">
-            <div className="row align-items-center">
-              <div className="col-xl-2">
-                <div className="mil-icon-frame mil-icon-frame-md mil-mb-30">
-                  <img src="img/icons/md/6.svg" alt="icon" />
-                </div>
-              </div>
-              <div className="col-xl-4">
-                <h4 className="mil-mb-30">Full-Stack Expertise</h4>
-              </div>
-              <div className="col-xl-6">
-                <p className="mil-box-text mil-mb-30">
-                  We cover the full technology stack — from hardware IoT integration and embedded systems to front-end web interfaces and mobile applications. You get a single team that understands the complete picture, not just one piece of it.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mil-divider" />
-          <div className="mil-line-icon-box">
-            <div className="row align-items-center">
-              <div className="col-xl-2">
-                <div className="mil-icon-frame mil-icon-frame-md mil-mb-30">
-                  <img src="img/icons/md/10.svg" alt="icon" />
-                </div>
-              </div>
-              <div className="col-xl-4">
-                <h4 className="mil-mb-30">Quality Without Compromise</h4>
-              </div>
-              <div className="col-xl-6">
-                <p className="mil-box-text mil-mb-30">
-                  Every project we deliver goes through thorough testing, performance checks, and quality review before it reaches you. We don't cut corners — because your reputation depends on what we build, and so does ours.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mil-divider" />
-          <div className="mil-line-icon-box">
-            <div className="row align-items-center">
-              <div className="col-xl-2">
-                <div className="mil-icon-frame mil-icon-frame-md mil-mb-30">
-                  <img src="img/icons/md/2.svg" alt="icon" />
-                </div>
-              </div>
-              <div className="col-xl-4">
-                <h4 className="mil-mb-30">Flexible & Client-Centered</h4>
-              </div>
-              <div className="col-xl-6">
-                <p className="mil-box-text mil-mb-30">
-                  We adapt to your workflow, your budget, and your timeline. Whether you need a quick landing page or a long-term technology partner, we structure our engagement around what works best for you — not for us.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mil-divider" />
-          <div className="mil-line-icon-box">
-            <div className="row align-items-center">
-              <div className="col-xl-2">
-                <div className="mil-icon-frame mil-icon-frame-md mil-mb-30">
-                  <img src="img/icons/md/4.svg" alt="icon" />
-                </div>
-              </div>
-              <div className="col-xl-4">
-                <h4 className="mil-mb-30">Fast Turnaround</h4>
-              </div>
-              <div className="col-xl-6">
-                <p className="mil-box-text mil-mb-30">
-                  We move fast without sacrificing quality. Our agile approach means you see progress quickly, feedback is acted on immediately, and your product reaches completion on schedule — or ahead of it.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mil-divider" />
-          <div className="mil-line-icon-box">
-            <div className="row align-items-center">
-              <div className="col-xl-2">
-                <div className="mil-icon-frame mil-icon-frame-md mil-mb-30">
-                  <img src="img/icons/md/5.svg" alt="icon" />
-                </div>
-              </div>
-              <div className="col-xl-4">
-                <h4 className="mil-mb-30">Innovation-Driven</h4>
-              </div>
-              <div className="col-xl-6">
-                <p className="mil-box-text mil-mb-30">
-                  We stay at the forefront of technology — from AI-integrated applications to autonomous robotics support. Our team continuously learns and evolves so that what we build for you is always ahead of the curve, not behind it.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mil-divider" />
-        </div>
-      </section>
-      {/* why work with us end */}
+  </Layouts>
+);
 
-      {/* values */}
-      <section className="mil-deep-bg mil-p-120-60">
-        <div className="mil-deco" style={{ top: 0, right: "25%" }} />
-        <div className="container">
-          <span className="mil-suptitle mil-suptitle-2 mil-mb-30">
-            Our Culture
-          </span>
-          <h2 className="mil-mb-120">
-            We Live by <span className="mil-accent">Powerful</span> Values
-          </h2>
-          <div className="row">
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/6.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Are Passionate</h4>
-                  <p className="mil-box-text">
-                    Technology is not just our profession — it's our passion. We genuinely care about building things that work beautifully and solve real problems for the people who use them.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/2.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Go Deep</h4>
-                  <p className="mil-box-text">
-                    We don't skim the surface. Whether it's understanding your business requirements or debugging a complex system, we dig deep until we fully understand the problem and the best way to solve it.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/3.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Take Ownership</h4>
-                  <p className="mil-box-text">
-                    When we commit to a project, we treat it like it's our own. Your success is our success. We take full responsibility for what we deliver and stand behind every line of code we write.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/1.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Value Transparency</h4>
-                  <p className="mil-box-text">
-                    We believe in open, honest communication at every step. You'll always know where your project stands, what we're working on, and what to expect — no surprises, no runarounds.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/5.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Believe in Growth</h4>
-                  <p className="mil-box-text">
-                    We invest in our team's continuous learning and push ourselves to grow with every project. The technology landscape evolves fast — and so do we, ensuring our clients always get the best available solutions.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-xl-4">
-              <div className="mil-icon-box-2 mil-mb-60">
-                <div className="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
-                  <img src="img/icons/md/4.svg" alt="icon" />
-                </div>
-                <div className="mil-box-text">
-                  <h4 className="mil-mb-30">We Say "We"</h4>
-                  <p className="mil-box-text">
-                    No individual egos — we operate as one team. Every project is a collective effort, and every win belongs to all of us. That collaborative spirit is what makes NexonGreen's culture and output exceptional.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* values end */}
-
-      <ContactForm />
-    </Layouts>
-  );
-};
 export default About;

@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 
 const STATS = [
   { value: 200, suffix: "+", label: "Projects Delivered" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 5, suffix: "+", label: "Years of Experience" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
+  { value: 50,  suffix: "+", label: "Happy Clients" },
+  { value: 5,   suffix: "+", label: "Years of Experience" },
+  { value: 98,  suffix: "%", label: "Client Satisfaction" },
 ];
 
 function useCountUp(target, duration = 1800, start = false) {
@@ -12,9 +12,9 @@ function useCountUp(target, duration = 1800, start = false) {
   useEffect(() => {
     if (!start) return;
     let startTime = null;
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
+    const step = (ts) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.floor(eased * target));
       if (progress < 1) requestAnimationFrame(step);
@@ -28,9 +28,7 @@ const StatCounter = ({ value, suffix, label, started }) => {
   const count = useCountUp(value, 1800, started);
   return (
     <div className="ng-stat-item">
-      <div className="ng-stat-value">
-        {count}{suffix}
-      </div>
+      <div className="ng-stat-value">{count}{suffix}</div>
       <div className="ng-stat-label">{label}</div>
     </div>
   );

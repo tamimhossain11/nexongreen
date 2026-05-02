@@ -9,6 +9,11 @@ const nextConfig = {
         "instrumentation-client.js"
       );
     }
+
+    // Force single React instance to fix React 19 RC jsxDEV cold-compile crash
+    config.resolve.alias["react"] = path.resolve(__dirname, "node_modules/react");
+    config.resolve.alias["react-dom"] = path.resolve(__dirname, "node_modules/react-dom");
+
     return config;
   },
 };
