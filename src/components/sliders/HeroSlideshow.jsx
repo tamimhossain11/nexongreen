@@ -9,6 +9,16 @@ const HeroSection = () => {
       <div className="ng-hero__orb-1" />
       <div className="ng-hero__orb-2" />
 
+      {/* Full-canvas background Lottie */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
+        <LottiePlayer
+          path="/animations/hero-bg.json"
+          loop
+          autoplay
+          style={{ width: "100%", height: "100%", opacity: 0.22 }}
+        />
+      </div>
+
       <div className="ng-container" style={{ position: "relative", zIndex: 2, width: "100%" }}>
         <div className="ng-row" style={{ alignItems: "center", minHeight: "80vh" }}>
 
@@ -81,7 +91,7 @@ const HeroSection = () => {
               />
 
               {/* Floating info card — top-left */}
-              <div style={{
+              <div className="ng-hero__float-card" style={{
                 position: "absolute", top: "6%", left: "-8%",
                 background: "rgba(13,14,11,0.92)",
                 backdropFilter: "blur(20px)",
@@ -101,7 +111,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating info card — bottom-right */}
-              <div style={{
+              <div className="ng-hero__float-card" style={{
                 position: "absolute", bottom: "8%", right: "-8%",
                 background: "rgba(13,14,11,0.92)",
                 backdropFilter: "blur(20px)",
@@ -121,7 +131,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating pill — top-right */}
-              <div style={{
+              <div className="ng-hero__float-card" style={{
                 position: "absolute", top: "28%", right: "-14%",
                 background: "rgba(91,174,47,0.12)",
                 border: "1px solid rgba(91,174,47,0.25)",

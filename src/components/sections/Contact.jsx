@@ -21,10 +21,10 @@ const ContactSection = () => (
         </p>
       </div>
 
-      <div className="ng-row" style={{ alignItems: "flex-start", gap: 40 }}>
+      <div className="ng-contact-layout">
 
         {/* Left: info cards + quick-contact */}
-        <div style={{ flex: "0 0 300px" }}>
+        <div className="ng-contact-sidebar">
           <div className="ng-contact-info">
             {CONTACT_INFO.map((item, i) => (
               <div className="ng-contact-info-item" key={i}>
@@ -59,9 +59,9 @@ const ContactSection = () => (
         </div>
 
         {/* Right: form */}
-        <div style={{ flex: 1 }}>
+        <div className="ng-contact-form-col">
           <div className="ng-form">
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div className="ng-form-row">
               <div className="ng-form-group">
                 <label className="ng-form-label">Full Name <span style={{ color: "var(--accent)" }}>*</span></label>
                 <input className="ng-form-input" type="text" placeholder="John Doe" />
@@ -72,7 +72,7 @@ const ContactSection = () => (
               </div>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div className="ng-form-row">
               <div className="ng-form-group">
                 <label className="ng-form-label">Phone <span style={{ color: "rgba(255,255,255,0.25)" }}>(optional)</span></label>
                 <input className="ng-form-input" type="tel" placeholder="+880..." />

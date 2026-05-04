@@ -108,7 +108,7 @@ const Faq = () => {
       {/* ── FAQ Body ── */}
       <section style={{ padding: "96px 0 120px" }}>
         <div className="ng-container">
-          <div style={{ display: "grid", gridTemplateColumns: "240px 1fr", gap: 60, alignItems: "start" }}>
+          <div className="ng-faq-layout">
 
             {/* Sidebar tabs */}
             <div style={{ position: "sticky", top: 100 }}>

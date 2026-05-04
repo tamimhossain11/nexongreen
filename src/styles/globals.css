@@ -846,12 +846,6 @@ select.ng-form-input:focus {
   border-top: 1px solid rgba(91,174,47,0.08);
 }
 
-@media (max-width: 1024px) {
-  .ng-products .ng-products-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 @media (max-width: 768px) {
   .ng-products { padding: 68px 0; }
 }
@@ -860,4 +854,112 @@ select.ng-form-input:focus {
 .mil-top-panel {
   transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease,
               backdrop-filter 0.4s ease !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LAYOUT CLASSES (replaces inline grid/flex)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.ng-footer-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 48px;
+}
+
+.ng-products-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: start;
+}
+
+.ng-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.ng-why-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  padding: 28px 32px;
+  gap: 40px;
+}
+
+.ng-team-member {
+  display: grid;
+  gap: 60px;
+  align-items: start;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.ng-team-member--even { grid-template-columns: 320px 1fr; }
+.ng-team-member--odd  { grid-template-columns: 1fr 320px; }
+.ng-team-member--even .ng-team-member__photo   { order: 1; }
+.ng-team-member--even .ng-team-member__content { order: 2; }
+.ng-team-member--odd  .ng-team-member__photo   { order: 2; }
+.ng-team-member--odd  .ng-team-member__content { order: 1; }
+.ng-team-member__content { padding-top: 12px; }
+
+.ng-faq-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.ng-contact-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.ng-contact-sidebar  { flex: 0 0 300px; }
+.ng-contact-form-col { flex: 1; }
+
+.ng-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE BREAKPOINTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (max-width: 1100px) {
+  .ng-footer-columns { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .ng-products-grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1024px) {
+  .ng-why-row { grid-template-columns: 1fr; padding: 22px 16px; gap: 10px; }
+}
+
+@media (max-width: 900px) {
+  .ng-team-member,
+  .ng-team-member--even,
+  .ng-team-member--odd { grid-template-columns: 1fr !important; }
+  .ng-team-member--even .ng-team-member__photo,
+  .ng-team-member--odd  .ng-team-member__photo,
+  .ng-team-member--even .ng-team-member__content,
+  .ng-team-member--odd  .ng-team-member__content { order: unset !important; }
+  .ng-hero__visual { display: none; }
+  .ng-hero__float-card { display: none; }
+}
+
+@media (max-width: 768px) {
+  .ng-faq-layout { grid-template-columns: 1fr; gap: 36px; }
+  .ng-faq-layout > div:first-child { position: static !important; }
+  .ng-contact-layout { flex-direction: column; gap: 32px; }
+  .ng-contact-sidebar { flex: unset; width: 100%; }
+  .ng-stats-grid { grid-template-columns: 1fr 1fr; }
+  .ng-stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.06); }
+}
+
+@media (max-width: 640px) {
+  .ng-footer-columns { grid-template-columns: 1fr; gap: 28px; }
+  .ng-form-row { grid-template-columns: 1fr; }
+  .ng-hero { padding: 90px 0 56px; }
+  .ng-hero__stats { flex-wrap: wrap; gap: 16px 24px; }
+  .ng-container { padding: 0 16px; }
 }

@@ -30,7 +30,7 @@ const DefaultFooter = () => {
   return (
     <footer className="ng-footer">
       <div className="ng-container">
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.3fr", gap: 48 }}>
+        <div className="ng-footer-columns">
 
           {/* Brand column */}
           <div>

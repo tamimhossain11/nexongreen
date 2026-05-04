@@ -86,7 +86,7 @@ const About = () => (
     {/* ── Stats ── */}
     <section style={{ padding: "72px 0", background: "rgba(91,174,47,0.03)", borderTop: "1px solid rgba(91,174,47,0.08)", borderBottom: "1px solid rgba(91,174,47,0.08)" }}>
       <div className="ng-container">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 2 }}>
+        <div className="ng-stats-grid">
           {STATS.map((s, i) => (
             <div key={i} style={{ textAlign: "center", padding: "32px 20px", borderRight: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
               <div style={{ fontFamily: "var(--font-1)", fontSize: 46, fontWeight: 800, color: "var(--accent)", lineHeight: 1, marginBottom: 10 }}>{s.value}</div>
@@ -137,12 +137,8 @@ const About = () => (
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
           {WHY_US.map((item, i) => (
-            <div key={i} style={{
-              display: "grid", gridTemplateColumns: "280px 1fr",
-              padding: "28px 32px", gap: 40,
-              borderBottom: "1px solid rgba(255,255,255,0.05)",
-              transition: "background 0.2s ease",
-            }}
+            <div key={i} className="ng-why-row"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", transition: "background 0.2s ease" }}
               onMouseEnter={e => e.currentTarget.style.background = "rgba(91,174,47,0.03)"}
               onMouseLeave={e => e.currentTarget.style.background = "transparent"}
             >

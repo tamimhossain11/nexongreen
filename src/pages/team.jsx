@@ -13,7 +13,7 @@ const team = [
     name: "Sikder Atif Abrar",
     role: "Chief operating Officer",
     image: "/team/atif.jpeg",
-    bio: "Atif Abrar is the Founder and CEO of Nexon Green. Currently pursuing a BSc in Computer Science and Engineering, he combines technical knowledge with leadership and entrepreneurial vision. He leads the company's strategic direction, working closely with development and creative teams to deliver web development, software solutions, digital marketing, and multimedia production services.",
+    bio: "Atif Abrar is the Chief Operating Officer of Nexon Green. Currently pursuing a BSc in Computer Science and Engineering, he combines technical knowledge with leadership and entrepreneurial vision. He leads the company's strategic direction, working closely with development and creative teams to deliver web development, software solutions, digital marketing, and multimedia production services.",
     skills: ["Strategic Leadership", "Java & Python", "HTML & CSS", "Web Development", "AI Tools Utilization", "Workflow Automation", "IT Consultancy", "Project Coordination"],
   },
   {
@@ -69,17 +69,10 @@ const Team = () => (
       <div className="ng-container">
         <div style={{ display: "flex", flexDirection: "column", gap: 80 }}>
           {team.map((member, i) => (
-            <div key={i} style={{
-              display: "grid",
-              gridTemplateColumns: i % 2 === 0 ? "320px 1fr" : "1fr 320px",
-              gap: 60,
-              alignItems: "start",
-              paddingBottom: 80,
-              borderBottom: "1px solid rgba(255,255,255,0.05)",
-            }}>
+            <div key={i} className={`ng-team-member ${i % 2 === 0 ? "ng-team-member--even" : "ng-team-member--odd"}`}>
 
               {/* Photo */}
-              <div style={{ order: i % 2 === 0 ? 1 : 2 }}>
+              <div className="ng-team-member__photo">
                 <div style={{
                   borderRadius: 18, overflow: "hidden",
                   border: "1px solid rgba(91,174,47,0.15)",
@@ -91,7 +84,7 @@ const Team = () => (
               </div>
 
               {/* Content */}
-              <div style={{ order: i % 2 === 0 ? 2 : 1, paddingTop: 12 }}>
+              <div className="ng-team-member__content">
                 <span style={{
                   display: "inline-block",
                   fontFamily: "var(--font-2)", fontSize: 11, fontWeight: 700,
