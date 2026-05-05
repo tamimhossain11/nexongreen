@@ -999,3 +999,19 @@ select.ng-form-input:focus {
   .ng-hero__stats { flex-wrap: wrap; gap: 16px 24px; }
   .ng-container { padding: 0 16px; }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   NAVBAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ng-nav-inner {
+  padding: 0 40px;
+}
+
+@media (max-width: 1024px) {
+  .ng-nav-inner { padding: 0 24px; }
+  .ng-nav-contact-btn { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .ng-nav-inner { padding: 0 16px; }
+}

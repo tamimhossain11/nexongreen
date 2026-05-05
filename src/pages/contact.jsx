@@ -195,7 +195,7 @@ const Contact = () => {
       {/* Map */}
       <div style={{ borderTop: "1px solid rgba(91,174,47,0.08)", height: 380, overflow: "hidden" }}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4!2d90.4987!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0ed28eb7d95%3A0xf08b4a8e2e2b5f1b!2sPurbachal%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1710000000000!5m2!1sen!2sbd"
+          src="https://maps.google.com/maps?q=98+Road+No+9A,+Dhanmondi,+Dhaka+1205,+Bangladesh&output=embed&z=16"
           width="100%" height="380"
           style={{ border: 0, display: "block", filter: "invert(90%) hue-rotate(180deg)" }}
           allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"

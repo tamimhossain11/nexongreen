@@ -37,7 +37,7 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
           boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.35)" : "none",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 40px", height: 72, maxWidth: 1320, margin: "0 auto" }}>
+        <div className="ng-nav-inner" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 72, maxWidth: 1320, margin: "0 auto" }}>
 
           <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <img src="/logo-trans.png" alt="NexonGreen" style={{ width: 110, height: "auto", display: "block" }} />
@@ -67,7 +67,7 @@ const DefaultHeader = ({ transparent, headerTop, extarClass }) => {
           </nav>
 
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <Link href="/contact" className="ng-btn-primary" style={{ padding: "10px 24px", fontSize: 14 }}>
+            <Link href="/contact" className="ng-btn-primary ng-nav-contact-btn" style={{ padding: "10px 24px", fontSize: 14 }}>
               Contact Us
             </Link>
 
