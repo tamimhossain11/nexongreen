@@ -4,8 +4,7 @@ import Link from "next/link";
 
 const INFO = [
   { icon: "✉", label: "Email", value: "nexongreenltd@gmail.com", href: "mailto:nexongreenltd@gmail.com" },
-  { icon: "📍", label: "Location", value: "98 road no. 9A, Dhanmondi,
-Dhaka-1205", href: null },
+  { icon: "📍", label: "Location", value: "98 road no. 9A, Dhanmondi,Dhaka-1205", href: null },
   { icon: "💬", label: "Response Time", value: "Within 24 hours", href: null },
   { icon: "🕐", label: "Working Hours", value: "Sun – Thu, 9am – 6pm (BST)", href: null },
 ];
