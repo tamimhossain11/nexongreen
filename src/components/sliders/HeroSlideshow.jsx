@@ -31,8 +31,8 @@ const HeroSection = () => {
             </div>
 
             <h1 className="ng-hero__title">
-              Building the
-              <span className="ng-hero__title-line2">Digital Future</span>
+             Powering Future
+              <span className="ng-hero__title-line2">with Next-Gen IT</span>
               <span className="ng-hero__title-line3">IoT · AI · Web · Mobile · Forensics</span>
             </h1>
 
