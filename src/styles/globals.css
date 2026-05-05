@@ -976,6 +976,10 @@ select.ng-form-input:focus {
   .ng-team-member--odd  .ng-team-member__photo,
   .ng-team-member--even .ng-team-member__content,
   .ng-team-member--odd  .ng-team-member__content { order: unset !important; }
+  .ng-team-member__photo {
+    max-width: 260px;
+    margin: 0 auto;
+  }
   .ng-hero__visual { display: none; }
   .ng-hero__float-card { display: none; }
 }
