@@ -857,6 +857,33 @@ select.ng-form-input:focus {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BLOG LAYOUT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ng-blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 56px;
+  align-items: start;
+}
+.ng-blog-sidebar { position: sticky; top: 100px; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CONTACT INFO STRIP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.ng-contact-info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.ng-contact-info-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 26px 24px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+.ng-contact-info-strip__item:last-child { border-right: none; }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    LAYOUT CLASSES (replaces inline grid/flex)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
@@ -929,6 +956,12 @@ select.ng-form-input:focus {
 @media (max-width: 1100px) {
   .ng-footer-columns { grid-template-columns: 1fr 1fr; gap: 36px; }
   .ng-products-grid  { grid-template-columns: 1fr; }
+  .ng-blog-layout    { grid-template-columns: 1fr 260px; gap: 40px; }
+}
+
+@media (max-width: 1024px) {
+  .ng-contact-info-strip { grid-template-columns: 1fr 1fr; }
+  .ng-contact-info-strip__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
 }
 
 @media (max-width: 1024px) {
@@ -954,6 +987,9 @@ select.ng-form-input:focus {
   .ng-contact-sidebar { flex: unset; width: 100%; }
   .ng-stats-grid { grid-template-columns: 1fr 1fr; }
   .ng-stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .ng-blog-layout { grid-template-columns: 1fr; }
+  .ng-blog-sidebar { position: static; }
+  .ng-contact-info-strip { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
