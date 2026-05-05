@@ -62,7 +62,8 @@ const About = () => (
               Specializing in <span>Transforming Your Vision</span> Into Real Digital Products
             </h2>
             <p className="ng-section-desc" style={{ marginTop: 16, marginBottom: 32 }}>
-              NexonGreen is an IT solutions company based in Purbachal, Dhaka, Bangladesh. Founded with a single purpose: to help businesses and individuals harness the full power of modern technology. From startups needing their first website to established organizations seeking IoT integration or digital forensics support — we are the team that gets it done.
+              NexonGreen is an IT solutions company based in 98 road no. 9A, Dhanmondi,
+Dhaka-1205. Founded with a single purpose: to help businesses and individuals harness the full power of modern technology. From startups needing their first website to established organizations seeking IoT integration or digital forensics support — we are the team that gets it done.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link href="/contact" className="ng-btn-primary">Talk To an Expert</Link>

@@ -5,7 +5,8 @@ import Link from "next/link";
 const FAQS = {
   general: [
     { q: "What services does NexonGreen offer?", a: "NexonGreen offers a comprehensive range of IT services including IoT system design and integration, Android & iOS mobile app development, website design & WordPress development, personal portfolio creation, digital forensics with FTK, and AI/ML solutions. We also develop proprietary SaaS products like Staffly — our HRMS platform." },
-    { q: "Where is NexonGreen based?", a: "NexonGreen is headquartered in Purbachal, Dhaka, Bangladesh. While we are based in Bangladesh, we work with clients across the globe and deliver projects remotely with no quality compromise." },
+    { q: "Where is NexonGreen based?", a: "NexonGreen is headquartered in 98 road no. 9A, Dhanmondi,
+Dhaka-1205. While we are based in Bangladesh, we work with clients across the globe and deliver projects remotely with no quality compromise." },
     { q: "How long has NexonGreen been in operation?", a: "NexonGreen has been operating for 3+ years. In that time we've delivered 20+ projects, built 10+ mobile apps, and launched 15+ websites for clients ranging from individuals to established businesses." },
     { q: "Can NexonGreen handle both small and large-scale projects?", a: "Absolutely. We work with individual freelancers who need a portfolio site right through to businesses requiring full IoT infrastructure or enterprise SaaS deployment. Our team scales engagement to fit your project's scope and budget." },
     { q: "Do you offer ongoing support after project delivery?", a: "Yes. We provide post-delivery support, maintenance, and iterative improvements. We don't just hand over and leave — we treat your product as an ongoing partnership and help it scale as your business grows." },
