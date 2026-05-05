@@ -5,8 +5,8 @@ const team = [
   {
     name: "Alif Zahan Prachurja",
     role: "Chief Executive Officer",
-    image: "/team/prachurja.jpg",
-    bio: "Alif Zahan Prachurja is the Chairman of Nexon Green, providing strategic guidance and overseeing key business initiatives. Currently pursuing a degree in Marketing, he combines business knowledge with leadership and entrepreneurial vision to help Nexon Green grow as a globally recognized digital solutions company from Bangladesh.",
+    image: "/team/prachurja.jpeg",
+    bio: "Alif Zahan Prachurja is the CEO of Nexon Green, providing strategic guidance and overseeing key business initiatives. Currently pursuing a degree in Marketing, he combines business knowledge with leadership and entrepreneurial vision to help Nexon Green grow as a globally recognized digital solutions company from Bangladesh.",
     skills: ["Strategic Leadership", "Business Development", "Marketing Strategy", "Team Management", "Entrepreneurship", "Client Relationship Management", "Strategic Planning", "Innovation & Problem Solving"],
   },
   {
@@ -26,7 +26,7 @@ const team = [
   {
     name: "Tasfiqul Islam",
     role: "Chief Marketing Officer",
-    image: "/team/Tasfiq.jpg",
+    image: "/team/tasfiq.jpeg",
     bio: "Tasfiqul Islam is the CMO at Nexon Green, leading the company's marketing vision, creative strategy, and brand growth. He specializes in motion graphics, SaaS promotional videos, and professional video editing — creating high-impact content that attracts audiences and converts viewers into customers. He blends creativity, technology, and marketing strategy to drive business growth.",
     skills: ["Digital Marketing Strategy", "Brand Development", "Motion Graphics Design", "SaaS Promo Videos", "Video Editing & Post-Production", "Visual Storytelling", "Social Media Marketing", "Campaign Planning"],
   },
